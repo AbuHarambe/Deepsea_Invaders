@@ -1,11 +1,26 @@
-[gd_scene load_steps=2 format=3 uid="uid://dktdyic4puxgw"]
+[gd_scene load_steps=4 format=3 uid="uid://dktdyic4puxgw"]
 
 [ext_resource type="PackedScene" uid="uid://bg4a3kqnpolqt" path="res://Scenes/player.tscn" id="1_jjgbg"]
+[ext_resource type="PackedScene" uid="uid://4atn6j1ayvu6" path="res://Scenes/enemy.tscn" id="2_bo1nx"]
+[ext_resource type="PackedScene" uid="uid://dj1shnag1egsc" path="res://Scenes/health_bar.tscn" id="3_8gbba"]
 
 [node name="Main" type="Node2D"]
 
-[node name="Player" parent="." instance=ExtResource("1_jjgbg")]
+[node name="Player" parent="." groups=["player_group"] instance=ExtResource("1_jjgbg")]
+position = Vector2(587, -176)
+
+[node name="TestEnemy" parent="." instance=ExtResource("2_bo1nx")]
+position = Vector2(-251, 297)
+scale = Vector2(0.5, 0.5)
+speed = 300
 
 [node name="GameCamera" type="Camera2D" parent="."]
 
 [node name="HUD_Layer" type="CanvasLayer" parent="."]
+follow_viewport_enabled = true
+
+[node name="Health_Bar" parent="HUD_Layer" groups=["progress_bars"] instance=ExtResource("3_8gbba")]
+offset_left = 530.0
+offset_top = -426.0
+offset_right = 770.0
+offset_bottom = -407.0

@@ -2,13 +2,21 @@ extends CharacterBody2D
 
 # @export makes the variables show up on the right menu in Godot called Inspector
 @export var speed = 600
+@export var rotation_speed = 10.0
 @export var acceleration: float = 1800.0 # How quickly the player reaches max speed
 @export var friction: float = 1400.0 # How quickly the player slows down 
 @export var max_health: int = 100
 
+@onready var sprite_node = $Sprite
+@onready var hurtbox_node = $Hurtbox
 @onready var health_bar = get_tree().get_first_node_in_group("progress_bars")
 
 var current_health: int = 0
+
+# Const PI is 3.14159... (180 degrees)
+const PI_FLIP = PI  
+# Start with -PI/2 to fix the 90 degree alignment
+const UP_AXIS_OFFSET = -PI / 2.0
 
 var boundary_top_left = Vector2.ZERO
 var boundary_bottom_right = Vector2.ZERO
@@ -43,6 +51,30 @@ func _physics_process(delta: float) -> void:
 		velocity = velocity.move_toward(Vector2.ZERO, friction * delta)
 		
 	#moves the body based on the velocity set above
+	
+	if velocity.length_squared() > 1.0: 
+		
+		# 1. Start with the vector's angle
+		var target_rotation = velocity.angle()
+		
+		# 2. Add the 90-degree offset to align the sprite (e.g., UP)
+		target_rotation += UP_AXIS_OFFSET 
+		
+		# 3. 🚨 ADD THE 180 DEGREE FLIP 🚨
+		target_rotation += PI_FLIP 
+		
+		# 4. Smoothly rotate the nodes
+		sprite_node.rotation = lerp_angle(
+			sprite_node.rotation, 
+			target_rotation, 
+			delta * rotation_speed # This changes the speed of rotation
+		)
+		hurtbox_node.rotation = lerp_angle(
+			hurtbox_node.rotation, 
+			target_rotation, 
+			delta * rotation_speed # This changes the speed of rotation
+		)
+		
 	move_and_slide()
 	clamp_position()
 

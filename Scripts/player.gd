@@ -7,6 +7,9 @@ extends CharacterBody2D
 @export var friction: float = 1400.0 # How quickly the player slows down 
 @export var max_health: int = 100
 
+# @onready calls are established the second the scene is loaded
+@onready var scanner_node = $Scanner
+@onready var animation_player = $Scanner/Sprite/AnimationPlayer
 @onready var sprite_node = $Sprite
 @onready var hurtbox_node = $Hurtbox
 @onready var health_bar = get_tree().get_first_node_in_group("progress_bars")
@@ -32,7 +35,7 @@ func _ready() -> void:
 		# have fully initialized BEFORE we try to use them.
 		health_bar.call_deferred("init_health", current_health)
 	
-	pass
+	animation_player.play("Idle")
 
 #_process is called every frame. Delta is the elapsed time since the last frame
 func _physics_process(delta: float) -> void:
@@ -49,9 +52,8 @@ func _physics_process(delta: float) -> void:
 		# Use move_toward to move velocity toward Vector2.ZERO
 		# This creates the "sliding" or "floating" stop
 		velocity = velocity.move_toward(Vector2.ZERO, friction * delta)
-		
-	#moves the body based on the velocity set above
 	
+	# rotation mechancic
 	if velocity.length_squared() > 1.0: 
 		
 		# 1. Start with the vector's angle
@@ -75,8 +77,32 @@ func _physics_process(delta: float) -> void:
 			delta * rotation_speed # This changes the speed of rotation
 		)
 		
+	#moves the body based on the velocity set above
 	move_and_slide()
 	clamp_position()
+
+func _process(delta: float) -> void:
+	if is_instance_valid(scanner_node):
+		_rotate_scanner_to_mouse()
+		
+func _rotate_scanner_to_mouse():
+	var mouse_world_pos = get_global_mouse_position()
+	
+	# Calculate the vector pointing FROM the scanner TO the mouse
+	var direction_vector = mouse_world_pos - global_position 
+	
+	# Calculate the angle of that vector
+	var target_angle = direction_vector.angle()
+	
+	# 1. Apply the 90-degree offset for alignment
+	target_angle += UP_AXIS_OFFSET 
+	
+	# 2. 🚨 FINAL FIX: Add the 180-degree flip 🚨
+	target_angle += PI_FLIP 
+	
+	# Apply the rotation
+	scanner_node.rotation = target_angle
+
 
 func handle_death():
 	#for now just print the msg later on play sound and so on

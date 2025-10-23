@@ -26,6 +26,7 @@ window/stretch/aspect="expand"
 
 player_group=""
 progress_bars=""
+enemies=""
 
 [input]
 

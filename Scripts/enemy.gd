@@ -6,11 +6,13 @@ extends CharacterBody2D
 @export var friction: float = 1400.0 # How quickly the player slows down 
 @export var damage = 10
 @export var rotation_speed = 10.0
+@export var scan_difficulty: float = 2.0 # This is the goal time inside the scanner (was goal_time_inside)
 
 # allows this script to access the properties of Player
 @onready var sprite_node = $Sprite2D
 @onready var hurtbox_node = $CollisionShape2D
 @onready var player = get_tree().get_first_node_in_group("player_group")
+@onready var scanner_bar = $ScanProgressBar
 
 # Const PI is 3.14159... (180 degrees)
 const PI_FLIP = PI  
@@ -21,7 +23,6 @@ var in_scanner = false
 
 #_ready is called when the node enters the scene tree for the first time
 func _ready() -> void:
-	
 	pass
 
 #_process is called every frame. Delta is the elapsed time since the last frame
@@ -36,6 +37,7 @@ func _physics_process(delta: float) -> void:
 		
 	var speed = max_speed
 	if in_scanner:
+		# Enemy slows down when detected
 		speed = max_speed / 2
 	
 	#moves enemy towards vector target_direction
@@ -58,7 +60,7 @@ func _physics_process(delta: float) -> void:
 		# 2. Add the 90-degree offset to align the sprite (e.g., UP)
 		target_rotation += UP_AXIS_OFFSET 
 		
-		# 3. 🚨 ADD THE 180 DEGREE FLIP 🚨
+		# 3. ADD THE 180 DEGREE FLIP
 		target_rotation += PI_FLIP 
 		
 		# 4. Smoothly rotate the nodes
@@ -78,7 +80,7 @@ func _physics_process(delta: float) -> void:
 	if get_slide_collision_count() > 0:
 		_handle_specific_collision()
 
-
+# state maching for scan
 func set_scanner_state(is_in_scanner: bool):
 	in_scanner = is_in_scanner
 	# print("Enemy is now in_scanner: ", in_scanner) # Optional: Debug output
@@ -94,3 +96,8 @@ func _handle_specific_collision():
 			
 			player.take_damage(damage)
 			return # Stop after processing the specific collision
+
+func update_scan_progress(progress_ratio: float) -> void:
+	if is_instance_valid(scanner_bar):
+		# This still calls the correct function on the bar's script
+		scanner_bar.update_progress(progress_ratio)

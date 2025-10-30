@@ -14,12 +14,12 @@ func update_progress(ratio: float) -> void:
 	# 2. Control visibility based on the desired state:
 	
 	# Option A: Visible only when actively filling (0 < value < 1.0)
-	self.visible = ratio > 0.0 and ratio < 1.0
+	#self.visible = ratio > 0.0 and ratio < 1.0
 	
 	# --- OR ---
 	
 	# Option B: Visible as long as the enemy is being tracked (value > 0.0)
 	# This keeps the bar visible at 100% until the enemy is deleted.
-	# self.visible = ratio > 0.0 
+	#self.visible = ratio > 0.0 
 	
 	# Let's stick with the 'active filling' logic (Option A) for now.

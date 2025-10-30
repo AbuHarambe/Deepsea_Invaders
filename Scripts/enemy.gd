@@ -1,12 +1,18 @@
 extends CharacterBody2D
 
 # @export makes the variables show up on the right menu in Godot called Inspector
-@export var max_speed = 400
+@export var max_speed = 250
 @export var acceleration: float = 1800.0 # How quickly the player reaches max speed
 @export var friction: float = 1400.0 # How quickly the player slows down 
 @export var damage = 10
 @export var rotation_speed = 10.0
 @export var scan_difficulty: float = 2.0 # This is the goal time inside the scanner (was goal_time_inside)
+@export_group("Scan Decay Settings")
+# The rate at which progress decays when outside (e.g., 0.5 means half-speed decay)
+@export var scan_decay_rate: float = 0.5 
+# The time (in seconds) to pause before decay begins after exiting the scanner
+@export var scan_decay_delay: float = 1.0
+
 
 # allows this script to access the properties of Player
 @onready var sprite_node = $Sprite2D

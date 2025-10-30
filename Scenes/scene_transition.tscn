@@ -1,0 +1,33 @@
+[gd_scene load_steps=5 format=3 uid="uid://ds25g27xwqdhm"]
+
+[ext_resource type="Script" uid="uid://b5pwky0wj6hh2" path="res://Scenes/scene_transition.gd" id="1_crfs3"]
+
+[sub_resource type="Animation" id="Animation_xs6k6"]
+resource_name = "fade_in"
+length = 0.5
+
+[sub_resource type="Animation" id="Animation_vin40"]
+resource_name = "fade_out"
+length = 0.5
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_crfs3"]
+_data = {
+&"fade_in": SubResource("Animation_xs6k6"),
+&"fade_out": SubResource("Animation_vin40")
+}
+
+[node name="SceneTransition" type="CanvasLayer"]
+script = ExtResource("1_crfs3")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_crfs3")
+}

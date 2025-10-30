@@ -5,10 +5,28 @@
 [sub_resource type="Animation" id="Animation_xs6k6"]
 resource_name = "fade_in"
 length = 0.5
+markers = [{
+"color": Color(0.012617188, 0.012617188, 0.012617188, 1),
+"name": &"new_marker",
+"time": 0.07
+}, {
+"color": Color(1, 1, 1, 0.5882353),
+"name": &"new_marker_2",
+"time": 0.29
+}]
 
 [sub_resource type="Animation" id="Animation_vin40"]
 resource_name = "fade_out"
 length = 0.5
+markers = [{
+"color": Color(1, 1, 1, 0.5882353),
+"name": &"new_marker",
+"time": 0.01
+}, {
+"color": Color(0.012617188, 0.012617188, 0.012617188, 1),
+"name": &"new_marker_2",
+"time": 0.36
+}]
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_crfs3"]
 _data = {

@@ -31,8 +31,7 @@ layout_mode = 2
 
 [node name="Start" type="Button" parent="CenterContainer/VBoxContainer"]
 layout_mode = 2
-button_mask = 0
-text = "Starto"
+text = "Starto!"
 
 [node name="Optionen" type="Button" parent="CenterContainer/VBoxContainer"]
 layout_mode = 2

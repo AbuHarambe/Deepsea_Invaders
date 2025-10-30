@@ -13,4 +13,4 @@ func _process(delta: float) -> void:
 
 func _on_back_button_pressed() -> void:
 	print("Geh zurück zum MainMenue!")
-	get_tree().change_scene_to_file("res://Scenes/MainMenu.tscn")
+	get_tree().change_scene_to_file("res://Scenes/main_menue.tscn")

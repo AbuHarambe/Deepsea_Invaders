@@ -1,5 +1,6 @@
 extends Node2D
 
+@onready var hud_layer = $HUD_Layer
 var pause_menu_scene = preload("res://Scenes/pause_menue.tscn")
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -27,4 +28,4 @@ func _unhandled_input(event):
 		var pause_instance = pause_menu_scene.instantiate()
 
 		# 3. Das Menü zur aktuellen Szene hinzufügen
-		add_child(pause_instance)
+		hud_layer.add_child(pause_instance)

@@ -21,9 +21,6 @@ const PI_FLIP = PI
 # Start with -PI/2 to fix the 90 degree alignment
 const UP_AXIS_OFFSET = -PI / 2.0
 
-var boundary_top_left = Vector2.ZERO
-var boundary_bottom_right = Vector2.ZERO
-
 #_ready is called when the node enters the scene tree for the first time
 func _ready() -> void:
 	current_health = max_health
@@ -79,7 +76,6 @@ func _physics_process(delta: float) -> void:
 		
 	#moves the body based on the velocity set above
 	move_and_slide()
-	clamp_position()
 
 func _process(delta: float) -> void:
 	if is_instance_valid(scanner_node):
@@ -109,24 +105,6 @@ func handle_death():
 	print("Player Defeated.")
 	#removes the player from the game
 	queue_free()
-
- #clamps position to camera view
-func clamp_position():
-	if boundary_top_left != Vector2.ZERO and boundary_bottom_right != Vector2.ZERO:
-		
-		# Clamp X position between the left and right boundary edges
-		global_position.x = clamp(
-			global_position.x, 
-			boundary_top_left.x, 
-			boundary_bottom_right.x
-		)
-		
-		# Clamp Y position between the top and bottom boundary edges
-		global_position.y = clamp(
-			global_position.y, 
-			boundary_top_left.y, 
-			boundary_bottom_right.y
-		)
 
 func take_damage (dmg):
 	current_health = current_health - dmg

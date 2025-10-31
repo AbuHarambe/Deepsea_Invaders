@@ -1,13 +1,13 @@
 [gd_scene load_steps=5 format=3 uid="uid://4atn6j1ayvu6"]
 
-[ext_resource type="Script" uid="uid://cxcvxsysfexi4" path="res://Scripts/enemy.gd" id="1_1f0kj"]
+[ext_resource type="Script" uid="uid://cxcvxsysfexi4" path="res://Scripts/base_melee_blubblub.gd" id="1_1f0kj"]
 [ext_resource type="Texture2D" uid="uid://srcu0wghh0rc" path="res://Assets/Visual/Pufferfish.png" id="2_1f0kj"]
 [ext_resource type="PackedScene" uid="uid://bql5gie2os6e0" path="res://Scenes/scan_progress_bar.tscn" id="3_afpow"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1f0kj"]
 size = Vector2(127, 127)
 
-[node name="TestEnemy" type="CharacterBody2D"]
+[node name="MeleeEnemy" type="CharacterBody2D"]
 script = ExtResource("1_1f0kj")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]

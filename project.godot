@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Deepsea_Invaders"
-run/main_scene="uid://dktdyic4puxgw"
+run/main_scene="uid://dt7pnbn76qjs7"
 config/features=PackedStringArray("4.5", "GL Compatibility")
 config/icon="res://icon.svg"
 
@@ -27,6 +27,10 @@ window/stretch/aspect="expand"
 player_group=""
 progress_bars=""
 enemies=""
+
+[gui]
+
+common/main_scene="uid://dktdyic4puxgw"
 
 [input]
 

@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://dktdyic4puxgw"]
+[gd_scene load_steps=7 format=3 uid="uid://dktdyic4puxgw"]
 
 [ext_resource type="PackedScene" uid="uid://bg4a3kqnpolqt" path="res://Scenes/player.tscn" id="1_jjgbg"]
 [ext_resource type="Script" uid="uid://dc4utg2h24prv" path="res://Scripts/main.gd" id="1_jjvhh"]
 [ext_resource type="PackedScene" uid="uid://4atn6j1ayvu6" path="res://Scenes/base_melee_blubblub.tscn" id="2_bo1nx"]
 [ext_resource type="PackedScene" uid="uid://dj1shnag1egsc" path="res://Scenes/health_bar.tscn" id="3_8gbba"]
 [ext_resource type="PackedScene" uid="uid://clybyleaj20le" path="res://Scenes/base_ranged_blubblub.tscn" id="3_kry3j"]
+[ext_resource type="PackedScene" uid="uid://bcato4c1m12r2" path="res://Scenes/generic_progress_bar.tscn" id="6_21xkr"]
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_jjvhh")
@@ -28,3 +29,9 @@ offset_left = 1344.0
 offset_top = 16.0
 offset_right = 1584.0
 offset_bottom = 35.0
+
+[node name="Progress_Bar" parent="HUD_Layer" instance=ExtResource("6_21xkr")]
+offset_left = 1344.0
+offset_top = 48.0
+offset_right = 1584.0
+offset_bottom = 67.0

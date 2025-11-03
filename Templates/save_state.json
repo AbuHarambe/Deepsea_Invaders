@@ -1,0 +1,42 @@
+{
+  "playerName": "",
+  "playerXP": 0,
+  "cosmetics": {
+	"avatar": "default_01",
+	"avatarColor": "default_grey",
+	"hat": "none"
+  },
+  "enemyCaptureData": [
+	{
+	  "enemyTypeID": "Clownfish",
+	  "captureCount": 0
+	},
+	{
+	  "enemyTypeID": "Pufferfish",
+	  "captureCount": 0
+	},
+	{
+	  "enemyTypeID": "Parrotfish",
+	  "captureCount": 0
+	},
+	{
+	  "enemyTypeID": "Seahorse",
+	  "captureCount": 0
+	},
+	{
+	  "enemyTypeID": "Dolphin",
+	  "captureCount": 0
+	}
+  ],
+  "upgradeSkillData": {
+	"scanSpeed": {
+	  "skillLevel": 1
+	},
+	"scanRange": {
+	  "skillLevel": 1
+	},
+	"movementSpeed": {
+	  "skillLevel": 1
+	}
+  }
+}

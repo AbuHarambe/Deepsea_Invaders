@@ -33,6 +33,8 @@ func _ready() -> void:
 		health_bar.call_deferred("init_health", current_health)
 	
 	animation_player.play("Idle")
+	
+	load_save_state()
 
 #_process is called every frame. Delta is the elapsed time since the last frame
 func _physics_process(delta: float) -> void:
@@ -109,3 +111,9 @@ func handle_death():
 func take_damage (dmg):
 	current_health = current_health - dmg
 	health_bar.set_health(current_health)
+
+func load_save_state():
+	pass
+
+func write_load_state():
+	pass

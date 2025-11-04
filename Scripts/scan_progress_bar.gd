@@ -3,7 +3,7 @@ extends ProgressBar
 
 # Remove the entire _process function!
 # func _process(delta: float) -> void:
-#     ... (The logic here is now handled below)
+#     ... (The logic here is now handled wabelow)
 
 # Called by the Area2D (C) with the calculated progress
 func update_progress(ratio: float) -> void:

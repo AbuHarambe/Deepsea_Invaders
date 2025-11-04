@@ -14,6 +14,8 @@ extends CharacterBody2D
 @onready var hurtbox_node = $Hurtbox
 @onready var health_bar = get_tree().get_first_node_in_group("progress_bars")
 
+# save state vars
+
 var current_health: int = 0
 
 # Const PI is 3.14159... (180 degrees)
@@ -66,9 +68,9 @@ func _physics_process(delta: float) -> void:
 		
 		# 4. Smoothly rotate the nodes
 		sprite_node.rotation = lerp_angle(
-			sprite_node.rotation, 
-			target_rotation, 
-			delta * rotation_speed # This changes the speed of rotation
+		sprite_node.rotation, 
+		target_rotation, 
+		delta * rotation_speed # This changes the speed of rotation
 		)
 		hurtbox_node.rotation = lerp_angle(
 			hurtbox_node.rotation, 
@@ -112,7 +114,10 @@ func take_damage (dmg):
 	current_health = current_health - dmg
 	health_bar.set_health(current_health)
 
+# loads data from json and inserts into player variables
 func load_save_state():
+	
+	
 	pass
 
 func write_load_state():

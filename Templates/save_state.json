@@ -1,9 +1,8 @@
 {
   "playerName": "",
   "playerXP": 0,
+  "playerHP": 0,
   "cosmetics": {
-	"avatar": "default_01",
-	"avatarColor": "default_grey",
 	"hat": "none"
   },
   "enemyCaptureData": [

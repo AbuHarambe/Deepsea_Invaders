@@ -13,6 +13,7 @@ extends CharacterBody2D
 @onready var sprite_node = $Sprite
 @onready var hurtbox_node = $Hurtbox
 @onready var health_bar = get_tree().get_first_node_in_group("progress_bars")
+var save_json 
 
 # save state vars
 
@@ -116,7 +117,7 @@ func take_damage (dmg):
 
 # loads data from json and inserts into player variables
 func load_save_state():
-	
+	if save_json == null:
 	
 	pass
 

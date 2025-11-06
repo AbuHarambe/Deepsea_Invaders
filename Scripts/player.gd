@@ -118,6 +118,8 @@ func take_damage (dmg):
 # loads data from json and inserts into player variables
 func load_save_state():
 	if save_json == null:
+		"res://Templates/save_state.json"
+		
 	
 	pass
 

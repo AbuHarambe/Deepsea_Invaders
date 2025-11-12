@@ -1,0 +1,89 @@
+[gd_scene load_steps=4 format=3 uid="uid://c0s211xegts51"]
+
+[ext_resource type="Texture2D" uid="uid://bjhdtsjvr6wry" path="res://icon.svg" id="1_33mv2"]
+[ext_resource type="Script" uid="uid://bxkekkvqqq5f0" path="res://Scripts/wiki_entry_block.gd" id="1_t2r7q"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_t2r7q"]
+bg_color = Color(0.19, 0.19, 0.19, 0.6)
+
+[node name="WikiEntryBlock" type="Control"]
+custom_minimum_size = Vector2(184, 265)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -1416.0
+offset_bottom = -635.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_t2r7q")
+image = ExtResource("1_33mv2")
+title = "FishName"
+tier1info = "- Catch X more for Tier 1"
+tier2info = "- Catch X more for Tier 2"
+tier3info = "- Catch X more for Tier 3"
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Button" type="Button" parent="Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_t2r7q")
+
+[node name="MarginContainer" type="MarginContainer" parent="Panel/Button"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/Button/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="FishName" type="Label" parent="Panel/Button/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "FishName"
+horizontal_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="Panel/Button/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("1_33mv2")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Tier1Info" type="Label" parent="Panel/Button/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 14
+text = "- Catch X more for Tier 1"
+
+[node name="Tier2Info" type="Label" parent="Panel/Button/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 14
+text = "- Catch X more for Tier 2"
+
+[node name="Tier3Info" type="Label" parent="Panel/Button/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 14
+text = "- Catch X more for Tier 3"
+
+[connection signal="pressed" from="Panel/Button" to="." method="_on_button_pressed"]

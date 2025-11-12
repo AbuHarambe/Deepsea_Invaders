@@ -1,0 +1,32 @@
+[
+	{
+		"name": "Clownfisch",
+		"tier1": "Catch 10 salmon to unlock Salmon Expert I.",
+		"tier2": "Catch 50 salmon to unlock Salmon Expert II.",
+		"tier3": "Catch 200 salmon to unlock Salmon Master III."
+	},
+	{
+		"name": "Kugelfisch",
+		"tier1": "Catch 10 trout for Tier I.",
+		"tier2": "Catch 50 trout for Tier II.",
+		"tier3": "Catch 200 trout for Tier III."
+	},
+	{
+		"name": "Papageifisch",
+		"tier1": "Catch 10 carp for Tier I.",
+		"tier2": "Catch 50 carp for Tier II.",
+		"tier3": "Catch 200 carp for Tier III."
+	},
+	{
+		"name": "Seepferdchen",
+		"tier1": "Catch 10 carp for Tier I.",
+		"tier2": "Catch 50 carp for Tier II.",
+		"tier3": "Catch 200 carp for Tier III."
+	},
+	{
+		"name": "Delfin",
+		"tier1": "Catch 10 carp for Tier I.",
+		"tier2": "Catch 50 carp for Tier II.",
+		"tier3": "Catch 200 carp for Tier III."
+	}
+]

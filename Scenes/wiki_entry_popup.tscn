@@ -1,0 +1,63 @@
+[gd_scene load_steps=3 format=3 uid="uid://cvsnmcj1wc3tm"]
+
+[ext_resource type="Script" uid="uid://demldoi3nbqba" path="res://Scripts/wiki_entry_popup.gd" id="1_icsn7"]
+[ext_resource type="Texture2D" uid="uid://bjhdtsjvr6wry" path="res://icon.svg" id="1_nuu2t"]
+
+[node name="WikiEntryPopup" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_icsn7")
+
+[node name="Panel" type="Panel" parent="."]
+custom_minimum_size = Vector2(640, 480)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -320.0
+offset_top = -240.0
+offset_right = 320.0
+offset_bottom = 240.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/MarginContainer"]
+layout_mode = 2
+
+[node name="FishName" type="Label" parent="Panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Panel/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(120, 120)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("1_nuu2t")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Tier1Info" type="Label" parent="Panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Tier2Info" type="Label" parent="Panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Tier3Info" type="Label" parent="Panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Back" type="Button" parent="Panel/MarginContainer/VBoxContainer"]
+layout_mode = 2

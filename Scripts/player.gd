@@ -37,7 +37,7 @@ func _ready() -> void:
 	
 	animation_player.play("Idle")
 	
-	load_save_state()
+	#load_save_state()
 
 #_process is called every frame. Delta is the elapsed time since the last frame
 func _physics_process(delta: float) -> void:
@@ -116,6 +116,7 @@ func take_damage (dmg):
 	health_bar.set_health(current_health)
 
 # loads data from json and inserts into player variables
+"""
 func load_save_state():
 	if save_json == null:
 		"res://Templates/save_state.json"
@@ -125,3 +126,4 @@ func load_save_state():
 
 func write_load_state():
 	pass
+"""

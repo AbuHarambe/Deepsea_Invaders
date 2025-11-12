@@ -26,7 +26,10 @@ func _on_quit_pressed() -> void:
 
 
 func _on_wiki_pressed() -> void:
-	pass # Replace with function body.
+	var wiki_menu = load("res://Scenes/wiki_menu.tscn")
+	var wiki_menu_instance = wiki_menu.instantiate()
+	add_child(wiki_menu_instance)  # or add it to a Control parent like UILayer
+	
 
 
 func _on_start_pressed() -> void:

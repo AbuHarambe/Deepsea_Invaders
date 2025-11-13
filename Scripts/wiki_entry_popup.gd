@@ -3,9 +3,9 @@ signal closed
 
 @onready var tex_rect: TextureRect = $Panel/MarginContainer/VBoxContainer/TextureRect
 @onready var fish_name: Label = $Panel/MarginContainer/VBoxContainer/FishName
-@onready var tier1_lbl: Label = $Panel/MarginContainer/VBoxContainer/Tier1Info
-@onready var tier2_lbl: Label = $Panel/MarginContainer/VBoxContainer/Tier2Info
-@onready var tier3_lbl: Label = $Panel/MarginContainer/VBoxContainer/Tier3Info
+@onready var tier1_lbl: RichTextLabel = $Panel/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/Tier1Info
+@onready var tier2_lbl: RichTextLabel = $Panel/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/Tier2Info
+@onready var tier3_lbl: RichTextLabel = $Panel/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/Tier3Info
 @onready var back_btn: Button = $Panel/MarginContainer/VBoxContainer/Back
 @onready var panel: Panel = $Panel
 

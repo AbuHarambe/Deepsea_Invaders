@@ -1,9 +1,77 @@
 [
 	{
 		"name": "Clownfisch",
-		"tier1": "Catch 10 salmon to unlock Salmon Expert I.",
-		"tier2": "Catch 50 salmon to unlock Salmon Expert II.",
-		"tier3": "Catch 200 salmon to unlock Salmon Master III."
+		"tier1": "[b]Tier 1[/b]
+[table=2]
+[cell][b]Eigenschaft[/b][/cell]
+[cell][b]Anemonenfische[/b][/cell]
+
+[cell]Artenanzahl[/cell]
+[cell]ca. 30[/cell]
+
+[cell]Größe[/cell]
+[cell]Bis zu 20cm[/cell]
+
+[cell]Gewicht[/cell]
+[cell]Bis zu 200g[/cell]
+
+[cell]Lebensraum[/cell]
+[cell]Symbiose mit Anemonen; Schutz durch Schleimschicht vor dem Nesselgift der Anemone[/cell]
+
+[cell]Lebensweise[/cell]
+[cell]Harem mit einen [b]festen[/b] Paar[/cell]
+
+[cell]Fortpflanzung[/cell]
+[cell]Eiablage bei Vollmond vor Anemone; ca. 250 Eier[/cell]
+
+[cell]Ernährung[/cell]
+[cell]Allesfresser (Plankton, kleine Krebstiere, Algenreste)[/cell]
+
+[cell]Lebenserwartung[/cell]
+[cell]Bis zu 10 Jahre[/cell]
+[/table]
+",
+		"tier2": "[b]Tier 2[/b]
+Der Anemonenfisch ist der bunte WG-Bewohner der Korallenstadt: klein, laut, emotional abhängig – und definitiv passiv-aggressiv.
+Sein ganzes Leben dreht sich um eine schleimige Mitbewohnerin: die Seeanemone.
+Er lebt darin, schläft darin, verteidigt sie – und wenn man’s genau nimmt, macht sie den ganzen Job, während er rummeckert und Algen futtert.
+
+Die Rangordnung in so einer Anemonenfisch-WG ist klar geregelt:
+
+1. Die Chefin (größtes Weibchen)
+2. Der Stellvertreter (Männchen)
+3. Eine Handvoll Untertanen, die alle hoffen, irgendwann befördert zu werden – durch biologischen Aufstieg via Geschlechtsumwandlung.
+
+Wenn die Chefin stirbt, verwandelt sich das ranghöchste Männchen einfach in ein Weibchen.
+Kein Drama, keine Therapie – Evolution als Instant-Transition-Service.
+Fun Fact: Anemonenfische sind gegen das Gift ihrer Wirtin immun, aber nur, weil sie sich täglich mit ihrem Schleim einreiben.
+Ja, du hast richtig gelesen: Sie massieren sich mit Anemonenschleim, um nicht gefressen zu werden.
+Wenn das kein toxisches Verhältnis ist, weiß ich auch nicht.
+
+Kurz gesagt: Der Anemonenfisch ist das Paradebeispiel für Co-Abhängigkeit – biologisch brillant, emotional fragwürdig, und immer leicht überfordert.",
+		"tier3": " [b]Tier 3[/b]
+Tiefseebericht AM-21 / „Kolonie des Schweigens“
+
+Ort: Abhang eines toten Korallenriffs – 63 m Tiefe
+Expedition: Coral Genome Initiative
+
+„Die Anemonen sind tot. Aber sie… bewegen sich noch.“
+
+Zwischen versteinerten Polypen glimmen schwache Lichter.
+Anemonenfische schwimmen darin, geordnet, synchron – keiner frisst, keiner schläft.
+Ihr Verhalten ist untypisch: Sie bilden Formationen, wie Schriftzeichen, die im Sand zerfallen.
+
+DNA-Proben zeigen, dass die Fische ihre Schleimschicht verändert haben:
+Neue Proteine, identisch in allen Individuen – als würden sie gemeinsam ein neues Gewebe bilden.
+
+„Wir dachten, sie suchen nur Schutz. Aber vielleicht war die Anemone nie der Wirt.“
+
+Letzter Logbucheintrag, aufgenommen über Hydrophon:
+Ein pulsierendes Geräusch, halb Strom, halb Atem.
+Dann eine verzerrte Stimme, kaum hörbar:
+
+„Die Anemone… spricht jetzt durch sie.“
+"
 	},
 	{
 		"name": "Kugelfisch",

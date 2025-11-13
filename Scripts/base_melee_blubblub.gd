@@ -5,6 +5,14 @@ class_name BaseMeleeBlubblub # Gives the class a reusable name for type checking
 # ==============================================================================
 # 1. ENEMY STATS & EXPORTS (REUSABLE)
 # ==============================================================================
+@export var image: Texture2D:
+	set(value):
+		image = value
+		var sprite := get_node_or_null("Sprite2D")
+		if sprite:
+			sprite.texture = value
+	get:
+		return image
 @export var max_speed: float = 250.0
 @export var acceleration: float = 1800.0
 @export var friction: float = 1400.0 
@@ -15,6 +23,7 @@ class_name BaseMeleeBlubblub # Gives the class a reusable name for type checking
 @export var scan_decay_rate: float = 0.5 
 @export var scan_decay_delay: float = 1.0
 @export var scanner_slow_factor: float = 2.0
+
 
 
 # ==============================================================================

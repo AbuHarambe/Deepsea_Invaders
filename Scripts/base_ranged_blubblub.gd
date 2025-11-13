@@ -5,6 +5,14 @@ class_name BaseRangedBlubblub # Gives the class a reusable name for type checkin
 # ==============================================================================
 # 1. ENEMY STATS & EXPORTS (REUSABLE)
 # ==============================================================================
+@export var image: Texture2D:
+	set(value):
+		image = value
+		var sprite := get_node_or_null("Sprite2D")
+		if sprite:
+			sprite.texture = value
+	get:
+		return image
 @export var max_speed: float = 500.0
 @export var acceleration: float = 1800.0
 @export var friction: float = 1400.0 

@@ -79,15 +79,20 @@ func _ready():
 	if tier3:
 		tier3.text = _tier3info
 
-
+	
 func _on_button_pressed() -> void:
-	
 	var popup_scene: PackedScene = load("res://Scenes/wiki_entry_popup.tscn")
-	var popup: Control = popup_scene.instantiate()  # 👈 explicitly tell the parser its type
-	
-	# Add popup to overlay layer
-	var overlay := get_tree().root.get_node("MainMenue/Overlay") # <-- adjust to your path
+	var popup: Control = popup_scene.instantiate()
+
+	# Find the wiki menu instance this block belongs to
+	var wiki_menu = get_tree().get_first_node_in_group("wiki_menu")
+
+	# Or: var wiki_menu = get_parent().get_parent().get_parent() ... (but groups are cleaner)
+
+	var overlay = wiki_menu.get_overlay()
 	overlay.add_child(popup)
+	popup.set_data(_image, _title, _tier1info, _tier2info, _tier3info)
+
 	
 	# Feed Data
 	print("trying to feed")

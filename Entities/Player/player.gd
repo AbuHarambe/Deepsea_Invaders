@@ -13,9 +13,6 @@ extends CharacterBody2D
 @onready var sprite_node = $Sprite
 @onready var hurtbox_node = $Hurtbox
 @onready var health_bar = get_tree().get_first_node_in_group("progress_bars")
-var save_json 
-
-# save state vars
 
 var current_health: int = 0
 
@@ -81,6 +78,9 @@ func _physics_process(delta: float) -> void:
 		
 	#moves the body based on the velocity set above
 	move_and_slide()
+	
+	#clamp movement to water surface
+	global_position.y = max(global_position.y, WorldData.MAX_DEPTH_Y)
 
 func _process(delta: float) -> void:
 	if is_instance_valid(scanner_node):
@@ -114,16 +114,3 @@ func handle_death():
 func take_damage (dmg):
 	current_health = current_health - dmg
 	health_bar.set_health(current_health)
-
-# loads data from json and inserts into player variables
-"""
-func load_save_state():
-	if save_json == null:
-		"res://Templates/save_state.json"
-		
-	
-	pass
-
-func write_load_state():
-	pass
-"""

@@ -1,7 +1,7 @@
 extends Node2D
 
 @onready var hud_layer = $HUD_Layer
-var pause_menu_scene = preload("res://Scenes/pause_menue.tscn")
+var pause_menu_scene = preload("res://Scenes/pause_menu.tscn")
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass # Replace with function body.

@@ -1,6 +1,6 @@
 # File: BaseEnemy.gd
 extends CharacterBody2D
-class_name BaseRangedBlubblub # Gives the class a reusable name for type checking and exporting
+class_name BaseMeleeBlubblub # Gives the class a reusable name for type checking and exporting
 
 # ==============================================================================
 # 1. ENEMY STATS & EXPORTS (REUSABLE)
@@ -13,18 +13,17 @@ class_name BaseRangedBlubblub # Gives the class a reusable name for type checkin
 			sprite.texture = value
 	get:
 		return image
-@export var max_speed: float = 500.0
+@export var max_speed: float = 250.0
 @export var acceleration: float = 1800.0
 @export var friction: float = 1400.0 
 @export var damage: int = 10
 @export var rotation_speed: float = 10.0
 @export var scan_difficulty: float = 2.0 # Time goal to bubble away
-@export var max_distance_player: float = 600
-@export var min_distance_player: float = 300
 @export_group("Scan Decay Settings")
 @export var scan_decay_rate: float = 0.5 
 @export var scan_decay_delay: float = 1.0
 @export var scanner_slow_factor: float = 2.0
+
 
 
 # ==============================================================================
@@ -59,6 +58,8 @@ func _physics_process(delta: float) -> void:
 	_apply_rotation(delta)
 	move_and_slide()
 	
+	global_position.y = max(global_position.y, WorldData.MAX_DEPTH_Y)
+	
 	# 3d. COLLISION CHECK
 	if get_slide_collision_count() > 0:
 		_handle_specific_collision()
@@ -69,47 +70,20 @@ func _physics_process(delta: float) -> void:
 
 # Handles movement acceleration/friction and slow-down when scanned
 func _apply_movement(delta: float):
+	var target_direction = Vector2.ZERO
 	
-	if not is_instance_valid(player):
-		velocity = velocity.move_toward(Vector2.ZERO, friction * delta)
-		return # Stop if no player is present
-
-	var player_position: Vector2 = player.global_position
-	var distance_player: float = global_position.distance_to(player_position) # Cleaner distance method
-	var target_direction: Vector2 = (player_position - global_position).normalized()
-	
-	# 1. Determine Base Speed (Handles Scanner Debuff)
+	if is_instance_valid(player):
+		var player_position: Vector2 = player.global_position
+		target_direction = (player_position - global_position).normalized()
+		
 	var current_speed = max_speed
 	if in_scanner:
 		current_speed = max_speed / scanner_slow_factor
-		
-	var target_velocity = target_direction * current_speed # Calculate the desired velocity vector
-
-	# --- 2. Fix for Issue 1: Prevent Back-and-Forth (Prioritize the "Between" State) ---
 	
-	# If the enemy is too far away, move FORWARD
-	if distance_player > max_distance_player:
+	if target_direction:
+		var target_velocity = target_direction * current_speed
 		velocity = velocity.move_toward(target_velocity, acceleration * delta)
-		
-	# If the enemy is too close, move BACKWARD
-	elif distance_player < min_distance_player:
-		# We move AWAY from the player, which is the negative of the direction vector
-		var away_velocity = target_direction * -current_speed
-		velocity = velocity.move_toward(away_velocity, acceleration * delta)
-		
-	# If the enemy is in the preferred range, apply friction to HOLD position.
 	else:
-		# Stop moving in the direction of the player, effectively "holding" the position
-		# We apply friction to make the enemy hover in place
-		velocity = velocity.move_toward(Vector2.ZERO, friction * delta)
-
-	# --- 3. Fix for Issue 2: Speed Debuff Stacking (The velocity = -velocity line) ---
-	# The original bug was here: `velocity = -velocity.move_toward(...)` 
-	# That line was inverting and compounding the velocity vector, causing the stack. 
-	# The fix above avoids that by defining the desired 'away' vector explicitly.
-	
-	# If the enemy is not moving (e.g., stuck in a corner), apply friction anyway
-	if target_direction == Vector2.ZERO:
 		velocity = velocity.move_toward(Vector2.ZERO, friction * delta)
 
 # Handles the movement-based rotation of the visuals/hurtbox

@@ -1,25 +1,26 @@
 [gd_scene load_steps=5 format=3 uid="uid://4atn6j1ayvu6"]
 
-[ext_resource type="Script" uid="uid://cxcvxsysfexi4" path="res://Scripts/base_melee_blubblub.gd" id="1_1f0kj"]
-[ext_resource type="Texture2D" uid="uid://d2r5a40qtqj4p" path="res://Assets/Visual/Blubblubs/Kugelfisch.png" id="2_1f0kj"]
-[ext_resource type="PackedScene" uid="uid://bql5gie2os6e0" path="res://Scenes/scan_progress_bar.tscn" id="3_afpow"]
+[ext_resource type="Script" uid="uid://cxcvxsysfexi4" path="res://Entities/Templates/base_melee_blubblub.gd" id="1_etyrn"]
+[ext_resource type="Texture2D" uid="uid://d2r5a40qtqj4p" path="res://Assets/Visual/Blubblubs/Kugelfisch.png" id="2_ebrao"]
+[ext_resource type="PackedScene" uid="uid://bql5gie2os6e0" path="res://Entities/Bars/scan_progress_bar.tscn" id="3_wjdvo"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1f0kj"]
 size = Vector2(127, 127)
 
 [node name="MeleeEnemy" type="CharacterBody2D"]
-script = ExtResource("1_1f0kj")
+collision_layer = 2
+script = ExtResource("1_etyrn")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(-0.99998474, 9.000015)
-scale = Vector2(7.0078125, 7.0078125)
-texture = ExtResource("2_1f0kj")
+scale = Vector2(2, 2)
+texture = ExtResource("2_ebrao")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-0.5, -0.5)
 shape = SubResource("RectangleShape2D_1f0kj")
 
-[node name="ScanProgressBar" parent="." instance=ExtResource("3_afpow")]
+[node name="ScanProgressBar" parent="." instance=ExtResource("3_wjdvo")]
 offset_left = -80.0
 offset_top = 72.0
 offset_right = 74.0

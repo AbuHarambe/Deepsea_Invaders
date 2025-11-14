@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://dt7pnbn76qjs7"]
 
-[ext_resource type="Script" uid="uid://b2og6kqv6j5at" path="res://Scripts/main_menue.gd" id="1_7raxh"]
+[ext_resource type="Script" uid="uid://b2og6kqv6j5at" path="res://Menus/Scripts/main_menu.gd" id="1_28flt"]
 
 [node name="MainMenue" type="Control"]
 layout_mode = 3
@@ -12,7 +12,7 @@ offset_right = 7.0
 offset_bottom = 3.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_7raxh")
+script = ExtResource("1_28flt")
 
 [node name="CenterContainer" type="CenterContainer" parent="."]
 layout_mode = 1

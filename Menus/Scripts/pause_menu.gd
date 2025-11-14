@@ -29,10 +29,12 @@ func _on_neustart_pressed() -> void:
 
 
 func _on_wiki_platzhalter_pressed() -> void:
-	print("Wiki (Platzhalter) geöffnet")
+	var wiki_menu: PackedScene = load("res://Scenes/wiki_menu.tscn")
+	var wiki_menu_instance: Node = wiki_menu.instantiate()
+	add_child(wiki_menu_instance)
 
 
 func _on_zum_hauptmenü_pressed() -> void:
 	# WICHTIG: Immer zuerst un-pausen!
 	get_tree().paused = false
-	get_tree().change_scene_to_file("res://Scenes/main_menue.tscn")
+	get_tree().change_scene_to_file("res://Scenes/main_menu.tscn")

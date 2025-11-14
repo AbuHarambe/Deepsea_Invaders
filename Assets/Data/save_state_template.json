@@ -7,23 +7,23 @@
   },
   "enemyCaptureData": [
 	{
-	  "enemyTypeID": "Clownfish",
+	  "enemyTypeID": "Clownfisch",
 	  "captureCount": 0
 	},
 	{
-	  "enemyTypeID": "Pufferfish",
+	  "enemyTypeID": "Kugelfisch",
 	  "captureCount": 0
 	},
 	{
-	  "enemyTypeID": "Parrotfish",
+	  "enemyTypeID": "Papageifisch",
 	  "captureCount": 0
 	},
 	{
-	  "enemyTypeID": "Seahorse",
+	  "enemyTypeID": "Seepferdchen",
 	  "captureCount": 0
 	},
 	{
-	  "enemyTypeID": "Dolphin",
+	  "enemyTypeID": "Delfin",
 	  "captureCount": 0
 	}
   ],

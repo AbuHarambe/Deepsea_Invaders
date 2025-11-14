@@ -1,9 +1,9 @@
 [gd_scene load_steps=9 format=3 uid="uid://bg4a3kqnpolqt"]
 
-[ext_resource type="Script" uid="uid://xl0q22g8gn0a" path="res://Scripts/player.gd" id="1_cvnsp"]
-[ext_resource type="Texture2D" uid="uid://djr7ds5nug411" path="res://Assets/Visual/Sub.png" id="1_v0iea"]
-[ext_resource type="Script" uid="uid://ugn2nbaonkcg" path="res://Scripts/scanner.gd" id="3_vgqql"]
-[ext_resource type="Texture2D" uid="uid://cvllnk5mkxeb3" path="res://Assets/Visual/Scanner_animated_3t.png" id="4_vgqql"]
+[ext_resource type="Script" uid="uid://xl0q22g8gn0a" path="res://Entities/Player/player.gd" id="1_taegk"]
+[ext_resource type="Texture2D" uid="uid://djr7ds5nug411" path="res://Assets/Visual/Sub.png" id="2_kee72"]
+[ext_resource type="Script" uid="uid://ugn2nbaonkcg" path="res://Entities/Player/scanner.gd" id="3_prmdv"]
+[ext_resource type="Texture2D" uid="uid://cvllnk5mkxeb3" path="res://Assets/Visual/Scanner_animated_3t.png" id="4_s1j76"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_v0iea"]
 radius = 19.0
@@ -47,14 +47,14 @@ _data = {
 }
 
 [node name="Player" type="CharacterBody2D"]
-script = ExtResource("1_cvnsp")
+script = ExtResource("1_taegk")
 speed = 500
 
 [node name="Sprite" type="Sprite2D" parent="."]
 position = Vector2(-1, 0)
 rotation = -3.1415925
 scale = Vector2(0.2, 0.2)
-texture = ExtResource("1_v0iea")
+texture = ExtResource("2_kee72")
 
 [node name="Hurtbox" type="CollisionShape2D" parent="."]
 position = Vector2(-5.9604645e-08, -7.1054274e-15)
@@ -64,13 +64,14 @@ shape = SubResource("CapsuleShape2D_v0iea")
 [node name="Scanner" type="Area2D" parent="."]
 scale = Vector2(5, 5)
 collision_layer = 2
+collision_mask = 3
 monitorable = false
-script = ExtResource("3_vgqql")
+script = ExtResource("3_prmdv")
 
 [node name="Sprite" type="Sprite2D" parent="Scanner"]
 modulate = Color(1, 1, 1, 0.6666667)
 scale = Vector2(1.5, 1.5)
-texture = ExtResource("4_vgqql")
+texture = ExtResource("4_s1j76")
 hframes = 13
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Scanner/Sprite"]

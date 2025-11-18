@@ -1,0 +1,41 @@
+{
+  "playerName": "",
+  "playerXP": 0,
+  "playerHP": 0,
+  "cosmetics": {
+	"hat": "none"
+  },
+  "enemyCaptureData": [
+	{
+	  "enemyTypeID": "Clownfisch",
+	  "captureCount": 0
+	},
+	{
+	  "enemyTypeID": "Kugelfisch",
+	  "captureCount": 0
+	},
+	{
+	  "enemyTypeID": "Papageifisch",
+	  "captureCount": 0
+	},
+	{
+	  "enemyTypeID": "Seepferdchen",
+	  "captureCount": 0
+	},
+	{
+	  "enemyTypeID": "Delfin",
+	  "captureCount": 0
+	}
+  ],
+  "upgradeSkillData": {
+	"scanSpeed": {
+	  "skillLevel": 1
+	},
+	"scanRange": {
+	  "skillLevel": 1
+	},
+	"movementSpeed": {
+	  "skillLevel": 1
+	}
+  }
+}

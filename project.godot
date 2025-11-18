@@ -11,9 +11,15 @@ config_version=5
 [application]
 
 config/name="Deepsea_Invaders"
-run/main_scene="uid://dt7pnbn76qjs7"
+run/main_scene="uid://s5enjowc4ah0"
 config/features=PackedStringArray("4.5", "GL Compatibility")
 config/icon="res://icon.svg"
+
+[autoload]
+
+WikiData="*res://Scripts/wiki_data.gd"
+SaveManager="*res://Scripts/save_manager.gd"
+WorldData="*res://Scripts/world_data.gd"
 
 [display]
 

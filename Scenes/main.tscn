@@ -1,19 +1,29 @@
-[gd_scene load_steps=6 format=3 uid="uid://dktdyic4puxgw"]
+[gd_scene load_steps=10 format=3 uid="uid://dktdyic4puxgw"]
 
-[ext_resource type="PackedScene" uid="uid://bg4a3kqnpolqt" path="res://Scenes/player.tscn" id="1_jjgbg"]
+[ext_resource type="PackedScene" uid="uid://bg4a3kqnpolqt" path="res://Entities/Player/player.tscn" id="1_jjgbg"]
 [ext_resource type="Script" uid="uid://dc4utg2h24prv" path="res://Scripts/main.gd" id="1_jjvhh"]
-[ext_resource type="PackedScene" uid="uid://4atn6j1ayvu6" path="res://Scenes/base_melee_blubblub.tscn" id="2_bo1nx"]
-[ext_resource type="PackedScene" uid="uid://dj1shnag1egsc" path="res://Scenes/health_bar.tscn" id="3_8gbba"]
-[ext_resource type="PackedScene" uid="uid://clybyleaj20le" path="res://Scenes/base_ranged_blubblub.tscn" id="3_kry3j"]
+[ext_resource type="PackedScene" uid="uid://4atn6j1ayvu6" path="res://Entities/Templates/base_melee_blubblub.tscn" id="2_bo1nx"]
+[ext_resource type="PackedScene" uid="uid://c38uipep74dgj" path="res://Scenes/background.tscn" id="2_ynf5e"]
+[ext_resource type="Texture2D" uid="uid://nq0shklekhdr" path="res://Assets/Visual/Blubblubs/Delfin.png" id="3_6bp64"]
+[ext_resource type="PackedScene" uid="uid://dj1shnag1egsc" path="res://Entities/Bars/health_bar.tscn" id="3_8gbba"]
+[ext_resource type="PackedScene" uid="uid://clybyleaj20le" path="res://Entities/Templates/base_ranged_blubblub.tscn" id="3_kry3j"]
+[ext_resource type="Texture2D" uid="uid://dx2j4grwyrdt5" path="res://Assets/Visual/Blubblubs/Seepferdchen.png" id="5_344ge"]
+[ext_resource type="PackedScene" uid="uid://bcato4c1m12r2" path="res://Entities/Bars/generic_progress_bar.tscn" id="6_21xkr"]
 
 [node name="Main" type="Node2D"]
+position = Vector2(264, 792)
 script = ExtResource("1_jjvhh")
+
+[node name="Background" parent="." instance=ExtResource("2_ynf5e")]
+position = Vector2(504, 360)
+follow_node = NodePath("../Player")
 
 [node name="TestMelee" parent="." groups=["enemies"] instance=ExtResource("2_bo1nx")]
 position = Vector2(-251, 297)
-scale = Vector2(0.5, 0.5)
+image = ExtResource("3_6bp64")
 
 [node name="TestRanged" parent="." instance=ExtResource("3_kry3j")]
+image = ExtResource("5_344ge")
 
 [node name="Player" parent="." groups=["player_group"] instance=ExtResource("1_jjgbg")]
 position = Vector2(587, -176)
@@ -28,3 +38,11 @@ offset_left = 1344.0
 offset_top = 16.0
 offset_right = 1584.0
 offset_bottom = 35.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Progress_Bar" parent="HUD_Layer" instance=ExtResource("6_21xkr")]
+offset_left = 1344.0
+offset_top = 48.0
+offset_right = 1584.0
+offset_bottom = 67.0
+metadata/_edit_use_anchors_ = true

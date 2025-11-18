@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 
 WikiData="*res://Scripts/wiki_data.gd"
 SaveManager="*res://Scripts/save_manager.gd"
+WorldData="*res://Scripts/world_data.gd"
 
 [display]
 

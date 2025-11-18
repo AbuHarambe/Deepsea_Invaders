@@ -1,41 +1,41 @@
 {
   "cosmetics": {
-    "hat": "none"
+	"hat": "none"
   },
   "enemyCaptureData": [
-    {
-      "captureCount": 0.0,
-      "enemyTypeID": "Clownfisch"
-    },
-    {
-      "captureCount": 0.0,
-      "enemyTypeID": "Kugelfisch"
-    },
-    {
-      "captureCount": 0.0,
-      "enemyTypeID": "Papageifisch"
-    },
-    {
-      "captureCount": 0.0,
-      "enemyTypeID": "Seepferdchen"
-    },
-    {
-      "captureCount": 0.0,
-      "enemyTypeID": "Delfin"
-    }
+	{
+	  "captureCount": 0.0,
+	  "enemyTypeID": "Clownfisch"
+	},
+	{
+	  "captureCount": 0.0,
+	  "enemyTypeID": "Kugelfisch"
+	},
+	{
+	  "captureCount": 0.0,
+	  "enemyTypeID": "Papageifisch"
+	},
+	{
+	  "captureCount": 0.0,
+	  "enemyTypeID": "Seepferdchen"
+	},
+	{
+	  "captureCount": 0.0,
+	  "enemyTypeID": "Delfin"
+	}
   ],
   "playerHP": 0.0,
   "playerName": "",
   "playerXP": 0.0,
   "upgradeSkillData": {
-    "movementSpeed": {
-      "skillLevel": 1.0
-    },
-    "scanRange": {
-      "skillLevel": 1.0
-    },
-    "scanSpeed": {
-      "skillLevel": 1.0
-    }
+	"movementSpeed": {
+	  "skillLevel": 1.0
+	},
+	"scanRange": {
+	  "skillLevel": 1.0
+	},
+	"scanSpeed": {
+	  "skillLevel": 1.0
+	}
   }
 }

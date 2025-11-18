@@ -56,11 +56,11 @@ func _handle_new_game_path(path: String) -> void:
 	SaveManager.create_new_save(path, player_name)
 
 	# Go to your main menu or game scene
-	get_tree().change_scene_to_file("res://Scenes/main_menu.tscn")
+	get_tree().change_scene_to_file("res://Menus/Scenes/main_menu.tscn")
 	print("tried to change to main menu")
 
 func _handle_load_game_path(path: String) -> void:
 	if not SaveManager.load_save(path):
 		push_error("SaveSelect: Failed to load save at %s" % path)
 		return
-	get_tree().change_scene_to_file("res://Scenes/main_menu.tscn")
+	get_tree().change_scene_to_file("res://Menus/Scenes/main_menu.tscn")

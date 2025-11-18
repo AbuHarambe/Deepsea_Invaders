@@ -17,7 +17,7 @@ func _process(delta: float) -> void:
 
 func _on_optionen_pressed() -> void:
 	print("Öffne Optionen!")
-	get_tree().change_scene_to_file("res://Scenes/options_menu.tscn")
+	get_tree().change_scene_to_file("res://Menus/Scenes/options_menu.tscn")
 
 
 func _on_quit_pressed() -> void:
@@ -26,7 +26,7 @@ func _on_quit_pressed() -> void:
 
 
 func _on_wiki_pressed() -> void:
-	var wiki_menu: PackedScene = load("res://Scenes/wiki_menu.tscn")
+	var wiki_menu: PackedScene = load("res://Menus/Scenes/wiki_menu.tscn")
 	var wiki_menu_instance: Node = wiki_menu.instantiate()
 	add_child(wiki_menu_instance)
 

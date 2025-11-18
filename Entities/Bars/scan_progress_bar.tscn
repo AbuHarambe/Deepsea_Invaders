@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://bql5gie2os6e0"]
 
-[ext_resource type="Script" uid="uid://dits1p463ltaa" path="res://Entities/scan_progress_bar.gd" id="1_8tqh3"]
+[ext_resource type="Script" uid="uid://dits1p463ltaa" path="res://Entities/Bars/scan_progress_bar.gd" id="1_8tqh3"]
 
 [node name="ScanProgressBar" type="ProgressBar"]
 offset_right = 154.0

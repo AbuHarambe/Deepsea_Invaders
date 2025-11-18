@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://bcato4c1m12r2"]
 
-[ext_resource type="Script" uid="uid://qqrgb6i5a0my" path="res://Entities/generic_progress_bar.gd" id="1_2kvyf"]
+[ext_resource type="Script" uid="uid://qqrgb6i5a0my" path="res://Entities/Bars/generic_progress_bar.gd" id="1_2kvyf"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_78m4n"]
 bg_color = Color(0.82251006, 0.8426672, 0.85636824, 1)

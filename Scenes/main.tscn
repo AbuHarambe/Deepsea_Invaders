@@ -1,8 +1,9 @@
-[gd_scene load_steps=9 format=3 uid="uid://dktdyic4puxgw"]
+[gd_scene load_steps=10 format=3 uid="uid://dktdyic4puxgw"]
 
 [ext_resource type="PackedScene" uid="uid://bg4a3kqnpolqt" path="res://Entities/Player/player.tscn" id="1_jjgbg"]
 [ext_resource type="Script" uid="uid://dc4utg2h24prv" path="res://Scripts/main.gd" id="1_jjvhh"]
 [ext_resource type="PackedScene" uid="uid://4atn6j1ayvu6" path="res://Entities/Templates/base_melee_blubblub.tscn" id="2_bo1nx"]
+[ext_resource type="PackedScene" uid="uid://c38uipep74dgj" path="res://Scenes/background.tscn" id="2_ynf5e"]
 [ext_resource type="Texture2D" uid="uid://nq0shklekhdr" path="res://Assets/Visual/Blubblubs/Delfin.png" id="3_6bp64"]
 [ext_resource type="PackedScene" uid="uid://dj1shnag1egsc" path="res://Entities/Bars/health_bar.tscn" id="3_8gbba"]
 [ext_resource type="PackedScene" uid="uid://clybyleaj20le" path="res://Entities/Templates/base_ranged_blubblub.tscn" id="3_kry3j"]
@@ -12,6 +13,10 @@
 [node name="Main" type="Node2D"]
 position = Vector2(264, 792)
 script = ExtResource("1_jjvhh")
+
+[node name="Background" parent="." instance=ExtResource("2_ynf5e")]
+position = Vector2(504, 360)
+follow_node = NodePath("../Player")
 
 [node name="TestMelee" parent="." groups=["enemies"] instance=ExtResource("2_bo1nx")]
 position = Vector2(-251, 297)

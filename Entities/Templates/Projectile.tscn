@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://bflshfviyycqv"]
+
+[ext_resource type="Script" uid="uid://yp1w72182xmn" path="res://Entities/Templates/projectile.gd" id="1_k2vgr"]
+[ext_resource type="Texture2D" uid="uid://bjhdtsjvr6wry" path="res://icon.svg" id="2_k2vgr"]
+
+[node name="Projectile" type="Node2D"]
+script = ExtResource("1_k2vgr")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="Area2D/CollisionShape2D"]
+texture = ExtResource("2_k2vgr")

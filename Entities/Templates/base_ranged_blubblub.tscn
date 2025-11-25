@@ -1,7 +1,6 @@
-[gd_scene load_steps=5 format=3 uid="uid://clybyleaj20le"]
+[gd_scene load_steps=4 format=3 uid="uid://clybyleaj20le"]
 
 [ext_resource type="Script" uid="uid://ycvedrysojtr" path="res://Entities/Templates/base_ranged_blubblub.gd" id="1_7mwjo"]
-[ext_resource type="Texture2D" uid="uid://bjhdtsjvr6wry" path="res://icon.svg" id="2_due5x"]
 [ext_resource type="PackedScene" uid="uid://bql5gie2os6e0" path="res://Entities/Bars/scan_progress_bar.tscn" id="3_wjs7i"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1f0kj"]
@@ -13,7 +12,6 @@ script = ExtResource("1_7mwjo")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(2, 2)
-texture = ExtResource("2_due5x")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_1f0kj")

@@ -1,15 +1,11 @@
-[gd_scene load_steps=12 format=3 uid="uid://dktdyic4puxgw"]
+[gd_scene load_steps=8 format=3 uid="uid://dktdyic4puxgw"]
 
 [ext_resource type="PackedScene" uid="uid://bg4a3kqnpolqt" path="res://Entities/Player/player.tscn" id="1_jjgbg"]
-[ext_resource type="Script" path="res://Scripts/main.gd" id="1_jjvhh"]
-[ext_resource type="PackedScene" uid="uid://4atn6j1ayvu6" path="res://Entities/Templates/base_melee_blubblub.tscn" id="2_bo1nx"]
+[ext_resource type="Script" uid="uid://dc4utg2h24prv" path="res://Scripts/main.gd" id="1_jjvhh"]
 [ext_resource type="PackedScene" uid="uid://c38uipep74dgj" path="res://Scenes/background.tscn" id="2_ynf5e"]
-[ext_resource type="Texture2D" uid="uid://nq0shklekhdr" path="res://Assets/Visual/Blubblubs/Delfin.png" id="3_6bp64"]
 [ext_resource type="PackedScene" uid="uid://dj1shnag1egsc" path="res://Entities/Bars/health_bar.tscn" id="3_8gbba"]
-[ext_resource type="PackedScene" uid="uid://clybyleaj20le" path="res://Entities/Templates/base_ranged_blubblub.tscn" id="3_kry3j"]
-[ext_resource type="Texture2D" uid="uid://dx2j4grwyrdt5" path="res://Assets/Visual/Blubblubs/Seepferdchen.png" id="5_344ge"]
+[ext_resource type="PackedScene" uid="uid://bvy6ecx334lj6" path="res://Entities/Templates/Enemy_Seahorse.tscn" id="4_6bp64"]
 [ext_resource type="PackedScene" uid="uid://bcato4c1m12r2" path="res://Entities/Bars/generic_progress_bar.tscn" id="6_21xkr"]
-[ext_resource type="Script" uid="uid://iq1hfkjvaawf" path="res://Entities/Templates/EnemySniper.gd" id="7_d1ilt"]
 [ext_resource type="PackedScene" uid="uid://cl4pgawjyxh5q" path="res://Entities/Templates/parrot_melee_blubblub.tscn" id="7_hptm8"]
 
 [node name="Main" type="Node2D"]
@@ -20,24 +16,10 @@ script = ExtResource("1_jjvhh")
 position = Vector2(504, 360)
 follow_node = NodePath("../Player")
 
-[node name="TestMelee" parent="." groups=["enemies"] instance=ExtResource("2_bo1nx")]
-position = Vector2(-251, 297)
-image = ExtResource("3_6bp64")
-
-[node name="TestRanged" parent="." instance=ExtResource("3_kry3j")]
-position = Vector2(939, 125)
-image = ExtResource("5_344ge")
-
-[node name="SeahorseEnemy" parent="." instance=ExtResource("3_kry3j")]
-position = Vector2(332, 87)
-script = ExtResource("7_d1ilt")
-ammo_scene = null
-shot_cooldown = 3.0
-aim_time = 1.0
-projectile_speed = 800.0
-
 [node name="MeleeEnemy" parent="." instance=ExtResource("7_hptm8")]
 position = Vector2(109, 387)
+
+[node name="EnemySeahorse" parent="." instance=ExtResource("4_6bp64")]
 
 [node name="Player" parent="." groups=["player_group"] instance=ExtResource("1_jjgbg")]
 position = Vector2(587, -176)

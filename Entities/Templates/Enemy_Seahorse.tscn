@@ -10,6 +10,7 @@
 [node name="EnemySeahorse" type="Node2D"]
 script = ExtResource("1_yupuy")
 ammo_scene = ExtResource("2_7c8ae")
+image = ExtResource("3_bl6ep")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("3_bl6ep")

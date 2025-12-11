@@ -81,7 +81,7 @@ func _ready():
 
 	
 func _on_button_pressed() -> void:
-	var popup_scene: PackedScene = load("res://Scenes/wiki_entry_popup.tscn")
+	var popup_scene: PackedScene = load("res://Menus/Scenes/wiki_entry_popup.tscn")
 	var popup: Control = popup_scene.instantiate()
 
 	# Find the wiki menu instance this block belongs to

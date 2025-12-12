@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://cvsnmcj1wc3tm"]
 
 [ext_resource type="Script" uid="uid://demldoi3nbqba" path="res://Menus/Scripts/wiki_entry_popup.gd" id="1_icsn7"]
-[ext_resource type="Texture2D" uid="uid://bjhdtsjvr6wry" path="res://icon.svg" id="1_nuu2t"]
+[ext_resource type="Texture2D" uid="uid://bjhdtsjvr6wry" path="res://Assets/Visual/icon.svg" id="1_nuu2t"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_icsn7"]
 bg_color = Color(0.101960786, 0.101960786, 0.101960786, 0.89411765)

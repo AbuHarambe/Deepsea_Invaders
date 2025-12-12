@@ -1,14 +1,16 @@
-[gd_scene load_steps=3 format=3 uid="uid://bflshfviyycqv"]
+[gd_scene load_steps=4 format=3 uid="uid://bflshfviyycqv"]
 
 [ext_resource type="Script" uid="uid://yp1w72182xmn" path="res://Entities/Templates/projectile.gd" id="1_k2vgr"]
-[ext_resource type="Texture2D" uid="uid://bjhdtsjvr6wry" path="res://icon.svg" id="2_k2vgr"]
+[ext_resource type="Texture2D" uid="uid://bjhdtsjvr6wry" path="res://Assets/Visual/icon.svg" id="2_k2vgr"]
 
-[node name="Projectile" type="Node2D"]
+[sub_resource type="CircleShape2D" id="CircleShape2D_k2vgr"]
+
+[node name="Projectile" type="Area2D"]
+collision_layer = 16
 script = ExtResource("1_k2vgr")
 
-[node name="Area2D" type="Area2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-
-[node name="Sprite2D" type="Sprite2D" parent="Area2D/CollisionShape2D"]
+[node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("2_k2vgr")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_k2vgr")

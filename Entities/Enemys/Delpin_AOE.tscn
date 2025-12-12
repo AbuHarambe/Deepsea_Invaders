@@ -1,0 +1,28 @@
+[gd_scene load_steps=6 format=3 uid="uid://ct0qawatvsold"]
+
+[ext_resource type="Script" uid="uid://duny8ujr4ejpc" path="res://Entities/Templates/EnemyAoE.gd" id="1_o1qon"]
+[ext_resource type="PackedScene" uid="uid://bql5gie2os6e0" path="res://Entities/Bars/scan_progress_bar.tscn" id="1_teeny"]
+[ext_resource type="Texture2D" uid="uid://nq0shklekhdr" path="res://Assets/Visual/Blubblubs/Delfin.png" id="2_4e8fs"]
+[ext_resource type="PackedScene" uid="uid://d0j3sku8bfo52" path="res://Entities/Templates/AirRing.tscn" id="2_n487f"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_teeny"]
+
+[node name="DelpinAoe" type="CharacterBody2D" groups=["enemies"]]
+collision_layer = 4
+collision_mask = 9
+script = ExtResource("1_o1qon")
+projectile_scene = ExtResource("2_n487f")
+
+[node name="ScanProgressBar" parent="." instance=ExtResource("1_teeny")]
+offset_left = -80.0
+offset_top = 72.0
+offset_right = 74.0
+offset_bottom = 99.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_teeny")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_4e8fs")

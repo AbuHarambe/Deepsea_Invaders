@@ -1,0 +1,28 @@
+[gd_scene load_steps=6 format=3 uid="uid://b4e4md161bteq"]
+
+[ext_resource type="PackedScene" uid="uid://bql5gie2os6e0" path="res://Entities/Bars/scan_progress_bar.tscn" id="1_arda2"]
+[ext_resource type="Script" uid="uid://duny8ujr4ejpc" path="res://Entities/Templates/EnemyAoE.gd" id="1_b4owk"]
+[ext_resource type="PackedScene" uid="uid://fmjguu4inp5j" path="res://Entities/Templates/StandardAoEBullet.tscn" id="2_x3v5n"]
+[ext_resource type="Texture2D" uid="uid://b6moilxlc2way" path="res://Assets/Visual/Blubblubs/tuna.png" id="4_x3v5n"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_eikkn"]
+
+[node name="TunaAoe" type="CharacterBody2D" groups=["enemies"]]
+collision_layer = 4
+collision_mask = 9
+script = ExtResource("1_b4owk")
+projectile_scene = ExtResource("2_x3v5n")
+
+[node name="ScanProgressBar" parent="." instance=ExtResource("1_arda2")]
+offset_left = -80.0
+offset_top = 72.0
+offset_right = 74.0
+offset_bottom = 99.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("4_x3v5n")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_eikkn")

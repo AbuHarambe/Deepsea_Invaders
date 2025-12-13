@@ -5,7 +5,9 @@
 [ext_resource type="Texture2D" uid="uid://nq0shklekhdr" path="res://Assets/Visual/Blubblubs/Delfin.png" id="2_4e8fs"]
 [ext_resource type="PackedScene" uid="uid://d0j3sku8bfo52" path="res://Entities/Templates/AirRing.tscn" id="2_n487f"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_teeny"]
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_o1qon"]
+radius = 30.0
+height = 114.0
 
 [node name="DelpinAoe" type="CharacterBody2D" groups=["enemies"]]
 collision_layer = 4
@@ -21,8 +23,9 @@ offset_bottom = 99.0
 size_flags_horizontal = 4
 size_flags_vertical = 4
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("CircleShape2D_teeny")
-
 [node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(2, 2)
 texture = ExtResource("2_4e8fs")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_o1qon")

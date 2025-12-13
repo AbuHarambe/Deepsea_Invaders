@@ -4,7 +4,9 @@
 [ext_resource type="Script" uid="uid://fqxy3y7e7y8e" path="res://Entities/Templates/EnemyAssassin.gd" id="1_u5a76"]
 [ext_resource type="Texture2D" uid="uid://m538bux4m1g6" path="res://Assets/Visual/Blubblubs/Swordfish_assain.png" id="2_2hbbe"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_2hbbe"]
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_u5a76"]
+radius = 21.0
+height = 148.0
 
 [node name="SwordfishAssasin" type="CharacterBody2D" groups=["enemies"]]
 collision_layer = 4
@@ -20,7 +22,8 @@ size_flags_horizontal = 4
 size_flags_vertical = 4
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(2, 2)
 texture = ExtResource("2_2hbbe")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("CircleShape2D_2hbbe")
+shape = SubResource("CapsuleShape2D_u5a76")

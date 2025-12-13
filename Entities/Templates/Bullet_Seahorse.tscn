@@ -6,7 +6,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_csamx"]
 
 [node name="BulletSeahorse" type="Area2D"]
-collision_mask = 0
+collision_layer = 16
 script = ExtResource("1_kimgb")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]

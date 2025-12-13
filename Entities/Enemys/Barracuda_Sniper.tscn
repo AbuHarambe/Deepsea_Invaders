@@ -1,13 +1,17 @@
-[gd_scene load_steps=4 format=3 uid="uid://r36rk7hmid4c"]
+[gd_scene load_steps=5 format=3 uid="uid://r36rk7hmid4c"]
 
 [ext_resource type="PackedScene" uid="uid://bql5gie2os6e0" path="res://Entities/Bars/scan_progress_bar.tscn" id="1_0wgdi"]
+[ext_resource type="Script" uid="uid://iq1hfkjvaawf" path="res://Entities/Templates/EnemySniper.gd" id="1_ah7v0"]
 [ext_resource type="Texture2D" uid="uid://0ha2wj16x5vf" path="res://Assets/Visual/Blubblubs/Barracuda_Sniper.png" id="2_x7f8r"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_x7f8r"]
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_x7f8r"]
+radius = 13.0
+height = 144.0
 
 [node name="BarracudaSniper" type="CharacterBody2D" groups=["enemies"]]
 collision_layer = 4
 collision_mask = 17
+script = ExtResource("1_ah7v0")
 
 [node name="ScanProgressBar" parent="." instance=ExtResource("1_0wgdi")]
 offset_left = -80.0
@@ -18,7 +22,10 @@ size_flags_horizontal = 4
 size_flags_vertical = 4
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(2, 2)
 texture = ExtResource("2_x7f8r")
 
+[node name="Line2D" type="Line2D" parent="."]
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("CircleShape2D_x7f8r")
+shape = SubResource("CapsuleShape2D_x7f8r")

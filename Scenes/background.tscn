@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://c38uipep74dgj"]
 
 [ext_resource type="Script" uid="uid://b6sssrrxdaqeo" path="res://Scripts/background.gd" id="1_sn1xx"]
-[ext_resource type="Texture2D" uid="uid://b4ok5fb25wis7" path="res://Assets/Visual/ChatGPT Image Nov 13, 2025 at 11_42_14 AM.png" id="2_pojwb"]
+[ext_resource type="Texture2D" uid="uid://b4ok5fb25wis7" path="res://Assets/Visual/Basic_Hintergrund.png" id="2_pojwb"]
 
 [node name="Background" type="Node2D"]
 script = ExtResource("1_sn1xx")

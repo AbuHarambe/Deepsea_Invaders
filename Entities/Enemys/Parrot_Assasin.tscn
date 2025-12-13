@@ -4,8 +4,9 @@
 [ext_resource type="Texture2D" uid="uid://dbbbfafiriym6" path="res://Assets/Visual/Blubblubs/Papgeifisch.png" id="2_fjgcv"]
 [ext_resource type="PackedScene" uid="uid://bql5gie2os6e0" path="res://Entities/Bars/scan_progress_bar.tscn" id="3_anl6a"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_1f0kj"]
-size = Vector2(127, 127)
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_nkwqm"]
+radius = 13.0
+height = 58.0
 
 [node name="MeleeEnemy" type="CharacterBody2D" groups=["enemies"]]
 collision_layer = 4
@@ -13,13 +14,11 @@ collision_mask = 9
 script = ExtResource("1_nkwqm")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(-0.99998474, 9.000015)
 scale = Vector2(2, 2)
 texture = ExtResource("2_fjgcv")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-0.5, -0.5)
-shape = SubResource("RectangleShape2D_1f0kj")
+shape = SubResource("CapsuleShape2D_nkwqm")
 
 [node name="ScanProgressBar" parent="." instance=ExtResource("3_anl6a")]
 offset_left = -80.0

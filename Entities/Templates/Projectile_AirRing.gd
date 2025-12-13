@@ -4,6 +4,7 @@ extends Area2D
 @export var damage: int = 15
 @export var growth_rate: float = 1.5 # Wie schnell er größer wird
 @export var max_size: float = 4.0    # Wann er platzt
+@onready var player = get_tree().get_first_node_in_group("player_group")
 
 var velocity = Vector2.ZERO
 
@@ -22,7 +23,7 @@ func _physics_process(delta: float) -> void:
 func _on_body_entered(body: Node2D) -> void:
 	if body.is_in_group("player_group"):
 		if body.has_method("take_damage"):
-			body.take_damage(damage)
+			player.take_damage(damage)
 			pop_bubble()
 		# Optional: Ring zerstören beim Treffer? 
 		# Bei AoE lässt man ihn oft weiterfliegen ("Durchschlag").

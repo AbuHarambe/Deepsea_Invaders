@@ -5,7 +5,8 @@
 [ext_resource type="PackedScene" uid="uid://fmjguu4inp5j" path="res://Entities/Templates/StandardAoEBullet.tscn" id="2_x3v5n"]
 [ext_resource type="Texture2D" uid="uid://b6moilxlc2way" path="res://Assets/Visual/Blubblubs/tuna.png" id="4_x3v5n"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_eikkn"]
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_x3v5n"]
+height = 56.0
 
 [node name="TunaAoe" type="CharacterBody2D" groups=["enemies"]]
 collision_layer = 4
@@ -22,7 +23,8 @@ size_flags_horizontal = 4
 size_flags_vertical = 4
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(2, 2)
 texture = ExtResource("4_x3v5n")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("CircleShape2D_eikkn")
+shape = SubResource("CapsuleShape2D_x3v5n")

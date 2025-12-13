@@ -4,7 +4,9 @@
 [ext_resource type="PackedScene" uid="uid://bql5gie2os6e0" path="res://Entities/Bars/scan_progress_bar.tscn" id="1_y5w7w"]
 [ext_resource type="Texture2D" uid="uid://b34hsrj4bytul" path="res://Assets/Visual/Blubblubs/Trutle_Tank.png" id="2_1n47f"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_on2tx"]
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_1n47f"]
+radius = 35.0
+height = 124.0
 
 [node name="TurtleTank" type="CharacterBody2D" groups=["enemies"]]
 collision_layer = 4
@@ -19,8 +21,9 @@ offset_bottom = 99.0
 size_flags_horizontal = 4
 size_flags_vertical = 4
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("CircleShape2D_on2tx")
-
 [node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(2, 2)
 texture = ExtResource("2_1n47f")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_1n47f")

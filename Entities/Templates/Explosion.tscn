@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://dm2foiwnb06tc"]
+
+[ext_resource type="Script" uid="uid://gp3aoe7565s5" path="res://Entities/Templates/AoE_Explosion.gd" id="1_i4wkn"]
+[ext_resource type="Texture2D" uid="uid://bjhdtsjvr6wry" path="res://Assets/Visual/icon.svg" id="2_uwqrp"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_5ddco"]
+
+[node name="Explosion" type="Area2D"]
+collision_layer = 16
+script = ExtResource("1_i4wkn")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_uwqrp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_5ddco")

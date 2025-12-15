@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://nw35c5qyf0bf"]
+
+[ext_resource type="Script" uid="uid://cue80rkl68kd1" path="res://Entities/Templates/Bullet_Seahorse.gd" id="1_kimgb"]
+[ext_resource type="Texture2D" uid="uid://dx2j4grwyrdt5" path="res://Assets/Visual/Blubblubs/Seepferdchen.png" id="2_ts8x6"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_csamx"]
+
+[node name="BulletSeahorse" type="Area2D"]
+collision_layer = 16
+script = ExtResource("1_kimgb")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_ts8x6")
+
+[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="."]
+enable_node_path = NodePath("../CollisionShape2D")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_csamx")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

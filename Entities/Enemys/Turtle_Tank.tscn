@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://bqfom4p3l35hu"]
+
+[ext_resource type="Script" uid="uid://yif10kyskrr7" path="res://Entities/Templates/EnemyTank.gd" id="1_1n47f"]
+[ext_resource type="PackedScene" uid="uid://bql5gie2os6e0" path="res://Entities/Bars/scan_progress_bar.tscn" id="1_y5w7w"]
+[ext_resource type="Texture2D" uid="uid://b34hsrj4bytul" path="res://Assets/Visual/Blubblubs/Trutle_Tank.png" id="2_1n47f"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_1n47f"]
+radius = 35.0
+height = 124.0
+
+[node name="TurtleTank" type="CharacterBody2D" groups=["enemies"]]
+collision_layer = 4
+collision_mask = 17
+script = ExtResource("1_1n47f")
+
+[node name="ScanProgressBar" parent="." instance=ExtResource("1_y5w7w")]
+offset_left = -80.0
+offset_top = 72.0
+offset_right = 74.0
+offset_bottom = 99.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(2, 2)
+texture = ExtResource("2_1n47f")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_1n47f")

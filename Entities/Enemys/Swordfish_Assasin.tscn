@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://dss4eu78weyxf"]
+
+[ext_resource type="PackedScene" uid="uid://bql5gie2os6e0" path="res://Entities/Bars/scan_progress_bar.tscn" id="1_5b88g"]
+[ext_resource type="Script" uid="uid://fqxy3y7e7y8e" path="res://Entities/Templates/EnemyAssassin.gd" id="1_u5a76"]
+[ext_resource type="Texture2D" uid="uid://m538bux4m1g6" path="res://Assets/Visual/Blubblubs/Swordfish_assain.png" id="2_2hbbe"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_u5a76"]
+radius = 21.0
+height = 148.0
+
+[node name="SwordfishAssasin" type="CharacterBody2D" groups=["enemies"]]
+collision_layer = 4
+collision_mask = 17
+script = ExtResource("1_u5a76")
+
+[node name="ScanProgressBar" parent="." instance=ExtResource("1_5b88g")]
+offset_left = -80.0
+offset_top = 72.0
+offset_right = 74.0
+offset_bottom = 99.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(2, 2)
+texture = ExtResource("2_2hbbe")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_u5a76")

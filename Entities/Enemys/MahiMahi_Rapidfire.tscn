@@ -1,0 +1,31 @@
+[gd_scene load_steps=6 format=3 uid="uid://ut7xsb51d7is"]
+
+[ext_resource type="Script" uid="uid://cbofw6c1xsa62" path="res://Entities/Templates/EnemyRapidFire.gd" id="1_1lw2y"]
+[ext_resource type="PackedScene" uid="uid://bflshfviyycqv" path="res://Entities/Templates/Projectile.tscn" id="2_hrd1t"]
+[ext_resource type="PackedScene" uid="uid://bql5gie2os6e0" path="res://Entities/Bars/scan_progress_bar.tscn" id="3_crf71"]
+[ext_resource type="Texture2D" uid="uid://f0mh6k072rl5" path="res://Assets/Visual/Blubblubs/MahiMahi_Rapidfire.png" id="4_v15f4"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_1lw2y"]
+radius = 26.0
+height = 132.0
+
+[node name="MahiMahiRapidfire" type="CharacterBody2D"]
+collision_layer = 4
+collision_mask = 17
+script = ExtResource("1_1lw2y")
+ammo_scene = ExtResource("2_hrd1t")
+
+[node name="ScanProgressBar" parent="." groups=["enemies"] instance=ExtResource("3_crf71")]
+offset_left = -80.0
+offset_top = 72.0
+offset_right = 74.0
+offset_bottom = 99.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(2, 2)
+texture = ExtResource("4_v15f4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_1lw2y")

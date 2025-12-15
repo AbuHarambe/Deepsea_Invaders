@@ -1,46 +1,75 @@
-[gd_scene load_steps=10 format=3 uid="uid://dktdyic4puxgw"]
+[gd_scene load_steps=18 format=3 uid="uid://dktdyic4puxgw"]
 
 [ext_resource type="PackedScene" uid="uid://bg4a3kqnpolqt" path="res://Entities/Player/player.tscn" id="1_jjgbg"]
 [ext_resource type="Script" uid="uid://dc4utg2h24prv" path="res://Scripts/main.gd" id="1_jjvhh"]
-[ext_resource type="PackedScene" uid="uid://4atn6j1ayvu6" path="res://Entities/Templates/base_melee_blubblub.tscn" id="2_bo1nx"]
 [ext_resource type="PackedScene" uid="uid://c38uipep74dgj" path="res://Scenes/background.tscn" id="2_ynf5e"]
-[ext_resource type="Texture2D" uid="uid://nq0shklekhdr" path="res://Assets/Visual/Blubblubs/Delfin.png" id="3_6bp64"]
 [ext_resource type="PackedScene" uid="uid://dj1shnag1egsc" path="res://Entities/Bars/health_bar.tscn" id="3_8gbba"]
-[ext_resource type="PackedScene" uid="uid://clybyleaj20le" path="res://Entities/Templates/base_ranged_blubblub.tscn" id="3_kry3j"]
-[ext_resource type="Texture2D" uid="uid://dx2j4grwyrdt5" path="res://Assets/Visual/Blubblubs/Seepferdchen.png" id="5_344ge"]
+[ext_resource type="PackedScene" uid="uid://dt1xkib48mtxs" path="res://Entities/Enemys/Clownfish_Rapidfire.tscn" id="3_344ge"]
+[ext_resource type="PackedScene" uid="uid://b27c1emc1wd2s" path="res://Scenes/enemy_spawner.tscn" id="4_6bp64"]
+[ext_resource type="PackedScene" uid="uid://t0cyx3fnd5y3" path="res://Scenes/wall.tscn" id="4_21xkr"]
+[ext_resource type="PackedScene" uid="uid://r36rk7hmid4c" path="res://Entities/Enemys/Barracuda_Sniper.tscn" id="5_6bp64"]
+[ext_resource type="PackedScene" uid="uid://dsyn54yxcb8n1" path="res://Entities/Enemys/Pufferfish_Tank.tscn" id="6_6iyac"]
 [ext_resource type="PackedScene" uid="uid://bcato4c1m12r2" path="res://Entities/Bars/generic_progress_bar.tscn" id="6_21xkr"]
+[ext_resource type="PackedScene" uid="uid://cl4pgawjyxh5q" path="res://Entities/Enemys/Parrot_Assasin.tscn" id="7_fdnlq"]
+[ext_resource type="PackedScene" uid="uid://boh088qdnu8et" path="res://Entities/Enemys/Seahorse_Sniper.tscn" id="8_jkdf5"]
+[ext_resource type="PackedScene" uid="uid://ct0qawatvsold" path="res://Entities/Enemys/Delpin_AOE.tscn" id="9_wsu2k"]
+[ext_resource type="PackedScene" uid="uid://b4e4md161bteq" path="res://Entities/Enemys/Tuna_AOE.tscn" id="10_h1bgf"]
+[ext_resource type="PackedScene" uid="uid://ut7xsb51d7is" path="res://Entities/Enemys/MahiMahi_Rapidfire.tscn" id="11_b3802"]
+[ext_resource type="PackedScene" uid="uid://dss4eu78weyxf" path="res://Entities/Enemys/Swordfish_Assasin.tscn" id="13_fevyy"]
+[ext_resource type="PackedScene" uid="uid://bqfom4p3l35hu" path="res://Entities/Enemys/Turtle_Tank.tscn" id="14_hibaj"]
 
 [node name="Main" type="Node2D"]
 position = Vector2(264, 792)
 script = ExtResource("1_jjvhh")
 
+[node name="EnemySpawner" parent="." node_paths=PackedStringArray("player_node") instance=ExtResource("4_6bp64")]
+position = Vector2(-1736, -1384)
+player_node = NodePath("../Player")
+ENEMY_POOL_A = Array[PackedScene]([ExtResource("3_344ge"), ExtResource("6_6iyac"), ExtResource("7_fdnlq"), ExtResource("8_jkdf5"), ExtResource("9_wsu2k")])
+ENEMY_POOL_B = Array[PackedScene]([ExtResource("10_h1bgf"), ExtResource("11_b3802"), ExtResource("5_6bp64"), ExtResource("13_fevyy"), ExtResource("14_hibaj")])
+
 [node name="Background" parent="." instance=ExtResource("2_ynf5e")]
 position = Vector2(504, 360)
 follow_node = NodePath("../Player")
 
-[node name="TestMelee" parent="." groups=["enemies"] instance=ExtResource("2_bo1nx")]
-position = Vector2(-251, 297)
-image = ExtResource("3_6bp64")
-
-[node name="TestRanged" parent="." instance=ExtResource("3_kry3j")]
-image = ExtResource("5_344ge")
-
 [node name="Player" parent="." groups=["player_group"] instance=ExtResource("1_jjgbg")]
-position = Vector2(587, -176)
+position = Vector2(-1736, -1384)
+collision_mask = 7
 
 [node name="GameCamera" type="Camera2D" parent="Player"]
 position_smoothing_enabled = true
 
+[node name="Wall2" parent="." instance=ExtResource("4_21xkr")]
+position = Vector2(7616, -240)
+
+[node name="Wall4" parent="." instance=ExtResource("4_21xkr")]
+position = Vector2(288, -3592)
+rotation = 1.5707964
+scale = Vector2(3, 3)
+
+[node name="Wall5" parent="." instance=ExtResource("4_21xkr")]
+position = Vector2(376, 5328)
+rotation = 1.5707964
+scale = Vector2(3, 3)
+
+[node name="Wall" parent="." instance=ExtResource("4_21xkr")]
+position = Vector2(-6256, -360)
+
 [node name="HUD_Layer" type="CanvasLayer" parent="."]
 
 [node name="Health_Bar" parent="HUD_Layer" groups=["progress_bars"] instance=ExtResource("3_8gbba")]
-offset_left = 1344.0
-offset_top = 16.0
-offset_right = 1584.0
-offset_bottom = 35.0
-metadata/_edit_use_anchors_ = true
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -260.0
+offset_top = 20.0
+offset_right = -20.0
+offset_bottom = 39.0
+grow_horizontal = 0
+size_flags_horizontal = 8
 
 [node name="Progress_Bar" parent="HUD_Layer" instance=ExtResource("6_21xkr")]
+visible = false
 offset_left = 1344.0
 offset_top = 48.0
 offset_right = 1584.0

@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://cl4pgawjyxh5q"]
+
+[ext_resource type="Script" uid="uid://fqxy3y7e7y8e" path="res://Entities/Templates/EnemyAssassin.gd" id="1_nkwqm"]
+[ext_resource type="Texture2D" uid="uid://dbbbfafiriym6" path="res://Assets/Visual/Blubblubs/Papgeifisch.png" id="2_fjgcv"]
+[ext_resource type="PackedScene" uid="uid://bql5gie2os6e0" path="res://Entities/Bars/scan_progress_bar.tscn" id="3_anl6a"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_nkwqm"]
+radius = 13.0
+height = 58.0
+
+[node name="MeleeEnemy" type="CharacterBody2D" groups=["enemies"]]
+collision_layer = 4
+collision_mask = 9
+script = ExtResource("1_nkwqm")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(2, 2)
+texture = ExtResource("2_fjgcv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_nkwqm")
+
+[node name="ScanProgressBar" parent="." instance=ExtResource("3_anl6a")]
+offset_left = -80.0
+offset_top = 72.0
+offset_right = 74.0
+offset_bottom = 99.0
+size_flags_horizontal = 4
+size_flags_vertical = 4

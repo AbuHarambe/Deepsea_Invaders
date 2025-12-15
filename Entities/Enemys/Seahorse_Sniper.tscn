@@ -1,0 +1,33 @@
+[gd_scene load_steps=6 format=3 uid="uid://boh088qdnu8et"]
+
+[ext_resource type="PackedScene" uid="uid://bql5gie2os6e0" path="res://Entities/Bars/scan_progress_bar.tscn" id="1_fje6l"]
+[ext_resource type="Script" uid="uid://iq1hfkjvaawf" path="res://Entities/Templates/EnemySniper.gd" id="1_nrxyo"]
+[ext_resource type="PackedScene" uid="uid://nw35c5qyf0bf" path="res://Entities/Templates/Bullet_Seahorse.tscn" id="2_1ae0v"]
+[ext_resource type="Texture2D" uid="uid://dx2j4grwyrdt5" path="res://Assets/Visual/Blubblubs/Seepferdchen.png" id="3_1ae0v"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1ae0v"]
+size = Vector2(58, 29)
+
+[node name="SeahorseSniper" type="CharacterBody2D" groups=["enemies"]]
+collision_layer = 4
+collision_mask = 9
+script = ExtResource("1_nrxyo")
+ammo_scene = ExtResource("2_1ae0v")
+
+[node name="ScanProgressBar" parent="." instance=ExtResource("1_fje6l")]
+offset_left = -80.0
+offset_top = 72.0
+offset_right = 74.0
+offset_bottom = 99.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(2, 2)
+texture = ExtResource("3_1ae0v")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 1)
+shape = SubResource("RectangleShape2D_1ae0v")
+
+[node name="Line2D" type="Line2D" parent="."]

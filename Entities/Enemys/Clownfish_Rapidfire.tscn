@@ -1,0 +1,31 @@
+[gd_scene load_steps=6 format=3 uid="uid://dt1xkib48mtxs"]
+
+[ext_resource type="PackedScene" uid="uid://bql5gie2os6e0" path="res://Entities/Bars/scan_progress_bar.tscn" id="1_t8eoa"]
+[ext_resource type="Script" uid="uid://cbofw6c1xsa62" path="res://Entities/Templates/EnemyRapidFire.gd" id="1_w867c"]
+[ext_resource type="PackedScene" uid="uid://bflshfviyycqv" path="res://Entities/Templates/Projectile.tscn" id="2_d4dkf"]
+[ext_resource type="Texture2D" uid="uid://v18wu4gokvrk" path="res://Assets/Visual/Blubblubs/Clownfisch.png" id="4_j4mhh"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_w867c"]
+radius = 12.0
+height = 62.0
+
+[node name="ClownfishRapidfire" type="CharacterBody2D" groups=["enemies"]]
+collision_layer = 4
+collision_mask = 9
+script = ExtResource("1_w867c")
+ammo_scene = ExtResource("2_d4dkf")
+
+[node name="ScanProgressBar" parent="." instance=ExtResource("1_t8eoa")]
+offset_left = -80.0
+offset_top = 72.0
+offset_right = 74.0
+offset_bottom = 99.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(2, 2)
+texture = ExtResource("4_j4mhh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_w867c")

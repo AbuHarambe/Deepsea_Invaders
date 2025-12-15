@@ -80,8 +80,12 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 	
 	#clamp movement to water surface
-	global_position.y = max(global_position.y, WorldData.MAX_DEPTH_Y)
-
+	"""
+	global_position.y = max(global_position.y, WorldData.WATER_SURFACE_Y)
+	global_position.y = min(global_position.y, WorldData.MAX_DEPTH_Y)
+	print(global_position.y)
+	"""
+	
 func _process(delta: float) -> void:
 	if is_instance_valid(scanner_node):
 		_rotate_scanner_to_mouse()

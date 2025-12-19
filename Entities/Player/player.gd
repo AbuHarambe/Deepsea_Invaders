@@ -46,6 +46,7 @@ func _physics_process(delta: float) -> void:
 		var target_velocity = input_direction * speed
 		# Use move_toward to move current velocity towards target velocity
 		velocity = velocity.move_toward(target_velocity, acceleration * delta)
+		print("PLAYER global:", global_position)
 	else:
 		# Player is NOT providing input: Apply friction (gradual deceleration)
 		# Use move_toward to move velocity toward Vector2.ZERO
@@ -118,3 +119,13 @@ func handle_death():
 func take_damage (dmg):
 	current_health = current_health - dmg
 	health_bar.set_health(current_health)
+
+func take_knockback(activator: CharacterBody2D, strength: float, max_knockback_speed := 1200.0) -> void:
+	if not is_instance_valid(activator):
+		return
+
+	var knockback_dir := (global_position - activator.global_position).normalized()
+	velocity += knockback_dir * strength
+
+	if velocity.length() > max_knockback_speed:
+		velocity = velocity.normalized() * max_knockback_speed

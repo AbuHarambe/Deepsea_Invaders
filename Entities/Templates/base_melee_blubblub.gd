@@ -58,8 +58,6 @@ func _physics_process(delta: float) -> void:
 	_apply_rotation(delta)
 	move_and_slide()
 	
-	global_position.y = max(global_position.y, WorldData.MAX_DEPTH_Y)
-	
 	# 3d. COLLISION CHECK
 	if get_slide_collision_count() > 0:
 		_handle_specific_collision()

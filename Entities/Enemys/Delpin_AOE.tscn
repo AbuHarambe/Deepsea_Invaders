@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://duny8ujr4ejpc" path="res://Entities/Templates/EnemyAoE.gd" id="1_o1qon"]
 [ext_resource type="PackedScene" uid="uid://bql5gie2os6e0" path="res://Entities/Bars/scan_progress_bar.tscn" id="1_teeny"]
-[ext_resource type="Texture2D" uid="uid://nq0shklekhdr" path="res://Assets/Visual/Blubblubs/Delfin.png" id="2_4e8fs"]
+[ext_resource type="Texture2D" uid="uid://cgy68ogo2mle5" path="res://Assets/Visual/Blubblubs/Delfin.png" id="2_4e8fs"]
 [ext_resource type="PackedScene" uid="uid://d0j3sku8bfo52" path="res://Entities/Templates/AirRing.tscn" id="2_n487f"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_o1qon"]

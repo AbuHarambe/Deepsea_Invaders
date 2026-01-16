@@ -32,7 +32,7 @@
 			[cell]Bis zu 10 Jahre[/cell]
 			[/table]
 			",
-					"tier2": "[b]Tier 2[/b]
+		"tier2": "[b]Tier 2[/b]
 			Der Anemonenfisch ist der bunte WG-Bewohner der Korallenstadt: klein, laut, emotional abhängig – und definitiv 
 			passiv-aggressiv.
 			Sein ganzes Leben dreht sich um eine schleimige Mitbewohnerin: die Seeanemone.
@@ -55,7 +55,7 @@
 
 			Kurz gesagt: Der Anemonenfisch ist das Paradebeispiel für Co-Abhängigkeit – biologisch brillant, emotional 
 			fragwürdig, und immer leicht überfordert.",
-					"tier3": " [b]Tier 3[/b]
+		"tier3": " [b]Tier 3[/b]
 			Tiefseebericht AM-21 / „Kolonie des Schweigens“
 
 			Ort: Abhang eines toten Korallenriffs – 63 m Tiefe
@@ -80,27 +80,797 @@
 "
 	},
 	{
+		"ID": "1",
 		"name": "Kugelfisch",
-		"tier1": "Catch 10 trout for Tier I.",
-		"tier2": "Catch 50 trout for Tier II.",
-		"tier3": "Catch 200 trout for Tier III."
+		"tier1": "[b]Tier 1[/b]
+			[table=2]
+			[cell][b]Eigenschaft[/b][/cell]
+			[cell][b]Kugelfisch[/b][/cell]
+
+			[cell]Artenanzahl[/cell]
+			[cell]ca. 120[/cell]
+
+			[cell]Größe[/cell]
+			[cell]Bis zu 120cm[/cell]
+
+			[cell]Gewicht[/cell]
+			[cell]Bis zu 2 kg[/cell]
+
+			[cell]Lebensraum[/cell]
+			[cell]Tropische Meere, Korallenriffe, Seegraswiesen[/cell]
+
+			[cell]Lebensweise[/cell]
+			[cell]Bläht sich bei Gefahr auf, um größer zu wirken; Einzelgänger in festen Territorien[/cell]
+
+			[cell]Fortpflanzung[/cell]
+			[cell]Weibchen legt Eier ab, erst danach erfolgt Befruchtung durch Männchen[/cell]
+
+			[cell]Ernährung[/cell]
+			[cell]Krebstiere, Muscheln, Würmer, Algen[/cell]
+
+			[cell]Lebenserwartung[/cell]
+			[cell]5 – 10 Jahre[/cell]
+			[/table]
+			",
+		"tier2": "[b]Tier 2[/b]
+			Der Kugelfisch ist das Stressbällchen des Meeres – mit einem Unterschied:
+			Wenn du ihn drückst, stirbst du.
+
+			Er ist das ultimative Beispiel für die Laune der Evolution:
+			„Was wäre, wenn wir einen Fisch machen, der nicht wegrennen kann – also pusten wir ihn einfach auf,
+			bis niemand mehr weiß, wo vorne ist?“
+
+			Und es funktioniert.
+			Wenn Gefahr droht, verwandelt er sich von einem kompakten Snack in eine schwebende Wasserbombe
+			mit Gesichtsausdruck zwischen Panik und beleidigtem Luftballon.
+			Dazu kommen winzige Stacheln – rein optisch, um dem Angreifer mitzuteilen:
+			„Ich bin jetzt offiziell kein Spaß mehr.“
+
+			Als wäre das nicht genug, enthält sein Körper Tetrodotoxin –
+			eines der stärksten Nervengifte der Welt.
+			Ein Milligramm reicht, um einen Menschen ins Nirwana zu schicken,
+			und das ohne Gegengift.
+
+			In Japan heißt er trotzdem „Fugu“ und gilt als Delikatesse –
+			eine Mahlzeit mit eingebauter Todeslotterie.
+			(Kochprüfung: 2 Jahre. Fehlerquote: 1 Leben.)
+
+			Und dann gibt es da noch die Männchen,
+			die am Meeresboden kunstvolle Mandalas aus Sand bauen, um Weibchen zu beeindrucken.
+			Niemand weiß genau, warum.
+			Vielleicht, weil „Ich bin rund und tödlich“ nicht der romantischste Anmachspruch ist.
+
+			Kurzum:
+			Der Kugelfisch ist der niedlichste Fehler, den die Natur je begangen hat –
+			ein toxischer Ballon mit Kunstambitionen und ernstem Attitüdenproblem.",
+		"tier3":""
 	},
 	{
+		"ID": "2",
 		"name": "Papageifisch",
-		"tier1": "Catch 10 carp for Tier I.",
-		"tier2": "Catch 50 carp for Tier II.",
-		"tier3": "Catch 200 carp for Tier III."
+		"tier1": "[b]Tier 1[/b]
+			[table=2]
+			[cell][b]Eigenschaft[/b][/cell]
+			[cell][b]Papageifisch[/b][/cell]
+
+			[cell]Artenanzahl[/cell]
+			[cell]ca. 70[/cell]
+
+			[cell]Größe[/cell]
+			[cell]Bis zu 100cm[/cell]
+
+			[cell]Gewicht[/cell]
+			[cell]Bis zu 70 kg (Büffelkopf-Papageifisch)[/cell]
+
+			[cell]Lebensraum[/cell]
+			[cell]Korallenriffe, Seegraswiesen[/cell]
+
+			[cell]Lebensweise[/cell]
+			[cell]Einzelgänger oder Gruppen (je nach Art); sorgen für Gleichgewicht in Korallenriffen durch Ernährung[/cell]
+
+			[cell]Fortpflanzung[/cell]
+			[cell]Zunächst weiblich, werden später zu Männchen[/cell]
+
+			[cell]Ernährung[/cell]
+			[cell]Korallen, Seegras und Algen[/cell]
+
+			[cell]Lebenserwartung[/cell]
+			[cell]Bis zu 20 Jahre[/cell]
+			[/table]
+			",
+		"tier2": "[b]Tier 2[/b]
+			Der Papageifisch – bunt, glitzernd und scheinbar immer gut gelaunt –
+			sieht aus, als wäre er direkt aus einem Pixar-Film geschwommen.
+			Doch hinter seinem tropischen Lächeln steckt ein ziemlich eigenwilliges Nachtprogramm:
+			Bevor er schlafen geht, sondert er einen dicken Schleimfilm ab
+			und wickelt sich komplett darin ein.
+
+			Ja, richtig gelesen – der Papageifisch schläft in seiner eigenen Schleimblase.
+			Klingt eklig, ist aber genial:
+			Die glibbrige Hülle tarnt seinen Geruch und schützt ihn so vor nachtaktiven Räubern,
+			die sonst denken würden: „Oh, Mitternachtssnack!“
+
+			Doch wenn der Tag anbricht, geht es rund –
+			denn das Liebesleben des Papageifischs ist eine Mischung aus
+			Daily Soap, Dating-Show und Undercover-Operation.
+
+			Die sogenannten sekundären Männchen leben luxuriös:
+			Sie halten sich kleine Harems oder sichern sich temporäre Liebesnester am Riff.
+			Dort läuft das große Liebesspektakel ab –
+			immer schön eins zu eins, ein Männchen und ein Weibchen.
+			Romantik unter Wasser, Blasen inklusive.
+
+			Aber dann tauchen sie auf –
+			die primären Männchen, die wahren Trickbetrüger der Riffgesellschaft.
+			Diese Fische haben keine Lust auf lange Balzrituale,
+			also schummeln sie sich einfach rein.
+
+			Wie?
+			Ganz einfach:
+			Sie tarnen sich in den Farben eines Weibchens,
+			schwimmen unauffällig neben die Turteltauben
+			und stoßen im entscheidenden Moment blitzschnell
+			eine große Portion Sperma ins Wasser.
+
+			Heimlich, effizient und biologisch überlegen –
+			denn ihre Hoden sind tatsächlich größer als die der offiziellen Platzherren.
+			Mehr Power, mehr Chancen.
+			Natur hat eben Humor.",
+		"tier3":""
 	},
 	{
+		"ID":"3",
 		"name": "Seepferdchen",
-		"tier1": "Catch 10 carp for Tier I.",
-		"tier2": "Catch 50 carp for Tier II.",
-		"tier3": "Catch 200 carp for Tier III."
+		"tier1": "[b]Tier 1[/b]
+			[table=2]
+			[cell][b]Eigenschaft[/b][/cell]
+			[cell][b]Seepferdchen[/b][/cell]
+
+			[cell]Artenanzahl[/cell]
+			[cell]ca. 80[/cell]
+
+			[cell]Größe[/cell]
+			[cell]1,5 bis 35,5 cm[/cell]
+
+			[cell]Gewicht[/cell]
+			[cell]unbekannt[/cell]
+
+			[cell]Lebensraum[/cell]
+			[cell]Flache, tropische und gemäßigte Meere[/cell]
+
+			[cell]Lebensweise[/cell]
+			[cell]Alleine oder als lebenslanges Paar[/cell]
+
+			[cell]Fortpflanzung[/cell]
+			[cell]Einzige Tiere, bei denen das Männchen die Eier austrägt (ca. 45 Tage); Weibchen spritzt nach längerem Paarungstanz die Eier in die Bauchtasche des Männchens; 150 bis 2000 Eier; davor mehrtägige „Flirtphase“[/cell]
+
+			[cell]Ernährung[/cell]
+			[cell]Salzkrebschen, Plankton[/cell]
+
+			[cell]Lebenserwartung[/cell]
+			[cell]Bis zu 5 Jahre[/cell]
+			[/table]
+			",
+		"tier2": "[b]Tier 2[/b]
+			Die Seepferdchen – die Romantiker und gemütlichen Träumer des Meeres.
+			Schon ihr Aussehen wirkt, als hätte Mutter Natur irgendwann beschlossen:
+			„Warum nicht mal ein Mini-Pferd in Fischform?“
+
+			Doch hinter der niedlichen Fassade steckt ein echter biologischer Plot-Twist:
+			Beim Seepferdchen sind nämlich die Männchen schwanger.
+			Während andere Fische ihre Eier einfach ablegen und abhauen,
+			trägt das Seepferdchen-Männchen den Nachwuchs höchstpersönlich
+			in seiner Bauchtasche aus.
+
+			Da wird geschnauft, gebrütet und schließlich
+			in feinster Geburtsdramatik der Nachwuchs ins Meer gepustet –
+			Hunderte winzige Baby-Seepferdchen auf einmal.
+			Wer braucht schon Gleichberechtigung,
+			wenn man sowas toppen kann?
+
+			Und dann wäre da noch ihr Tempo –
+			oder besser gesagt: das Fehlen davon.
+			Mit etwa 1,5 Metern pro Stunde sind Seepferdchen
+			offiziell die langsamsten Fische der Welt.
+			Ja, richtig – selbst Schnecken würden sie locker überholen
+			und dabei wahrscheinlich noch gelangweilt gähnen.
+
+			Während andere Fische durchs Riff schießen,
+			dümpelt das Seepferdchen elegant vor sich hin,
+			hält sich mit seinem kleinen Greifschwänzchen am Seegras fest
+			und tut so, als wäre das alles Absicht:
+			„Ich bin nicht langsam, ich genieße nur das Leben.“
+
+			Kurz gesagt:
+			Seepferdchen sind die Zen-Meister des Ozeans –
+			langsam, liebevoll und mit einer Vorliebe
+			für unkonventionelle Familienmodelle.
+			Wenn es im Meer eine Paartherapie gäbe,
+			würden sie sie wahrscheinlich leiten.",
+		"tier3": ""
 	},
 	{
+		"ID": "4",
 		"name": "Delfin",
-		"tier1": "Catch 10 carp for Tier I.",
-		"tier2": "Catch 50 carp for Tier II.",
-		"tier3": "Catch 200 carp for Tier III."
-	}
+		"tier1": "[b]Tier 1[/b]
+			[table=2]
+			[cell][b]Eigenschaft[/b][/cell]
+			[cell][b]Delfin[/b][/cell]
+
+			[cell]Artenanzahl[/cell]
+			[cell]ca. 90[/cell]
+
+			[cell]Größe[/cell]
+			[cell]1,5 m bis über 9 m (je nach Art)[/cell]
+
+			[cell]Gewicht[/cell]
+			[cell]50 kg bis 10 t[/cell]
+
+			[cell]Lebensraum[/cell]
+			[cell]Meer, Küste, Buchten, Lagunen[/cell]
+
+			[cell]Lebensweise[/cell]
+			[cell]Hochsoziale Gruppen, komplexe Kommunikation[/cell]
+
+			[cell]Fortpflanzung[/cell]
+			[cell]Lebendgebärend; Männchen betreiben teilweise Teamwerbung („Koalitionen“)[/cell]
+
+			[cell]Ernährung[/cell]
+			[cell]Fische, Kalmare, Krustentiere[/cell]
+
+			[cell]Lebenserwartung[/cell]
+			[cell]20 – 60 Jahre[/cell]
+			[/table]
+			",
+		"tier2": "[b]Tier 2[/b]
+			Wenn es im Meer so etwas wie den Klassenbesten gibt,
+			dann ist es der Delfin –
+			das Kind, das immer alles richtig macht,
+			nie Hausaufgaben vergisst
+			und beim Sport trotzdem alle abhängt.
+
+			Delfine sind charmant, intelligent
+			und wissen es leider auch.
+			Sie rufen sich gegenseitig beim Namen,
+			benutzen Werkzeuge,
+			bestehen den Spiegeltest
+			(was mehr ist, als man über manche Menschen sagen kann)
+			und geben Wissen an ihren Nachwuchs weiter.
+
+			Es ist, als hätte die Evolution irgendwann beschlossen:
+			„Lasst uns mal sehen,
+			was passiert,
+			wenn wir Intelligenz UND gute Laune kombinieren.“
+
+			Diese fröhlichen Unterwasserakrobaten
+			sind allerdings nicht nur nett –
+			sie sind verdammt clever.
+			Beim Jagen koordinieren sie sich so präzise,
+			dass man fast den Verdacht bekommt,
+			sie hätten WLAN.
+
+			Manche treiben Fischschwärme mit Luftblasen zusammen,
+			andere benutzen Schwämme als Nasenschutz
+			beim Graben nach Beute.
+			Und ja –
+			sie helfen nicht nur ihren Artgenossen,
+			sondern auch Menschen.
+			Ob aus Mitgefühl
+			oder einfach aus Neugier,
+			bleibt offen –
+			sympathisch ist es trotzdem.
+
+			Dabei sind Delfine nicht immer die Sonnenscheine,
+			als die man sie gerne verkauft.
+			Innerhalb ihrer Gruppen
+			kann es politisch zugehen
+			wie in einem schlechten Büro:
+			Allianzen,
+			Intrigen,
+			Flirtstrategien
+			und gelegentlich auch Gewalt.
+			Die Wissenschaft nennt es
+			„komplexes Sozialverhalten“.
+			Wir nennen es:
+			„Die haben eindeutig Netflix gesehen.“
+
+			Und wenn sie nicht gerade jagen,
+			Blasenringe pusten
+			oder ahnungslose Touristen verzaubern,
+			scheinen sie einfach Spaß am Leben zu haben:
+			Springen,
+			pfeifen,
+			surfen auf Bugwellen –
+			Delfine sind die Extremsportler des Ozeans
+			mit dem Energielevel eines Kindes
+			nach drei Lollis.
+
+			Kurzum:
+			Delfine sind Philosophen,
+			Lebensretter
+			und Spaßvögel in einem –
+			intelligent,
+			sozial
+			und mit einem Faible
+			für gemeinsames Jagen,
+			Schwimmen
+			und vermutlich auch Tratschen.
+
+			Vielleicht wissen sie längst mehr
+			über das Leben,
+			das Universum
+			und alles andere,
+			als sie uns verraten.
+			Und manchmal,
+			wenn sie elegant aus den Wellen springen
+			und ein letztes, glucksendes Pfeifen erklingt,
+			könnte man fast meinen,
+			sie verabschieden sich mit:
+			„So long… and thanks for all the fish.“",
+		"tier3": ""
+	},
+	{
+		"ID":"5",
+		"name":"Thunfisch",
+		"tier1": "[b]Tier 1[/b]
+			[table=2]
+			[cell][b]Eigenschaft[/b][/cell]
+			[cell][b]Thunfisch[/b][/cell]
+
+			[cell]Artenanzahl[/cell]
+			[cell]8[/cell]
+
+			[cell]Größe[/cell]
+			[cell]1 m bis zu 4,5 m[/cell]
+
+			[cell]Gewicht[/cell]
+			[cell]ab 20 kg bis zu 700 kg[/cell]
+
+			[cell]Lebensraum[/cell]
+			[cell]Im offenen Meer[/cell]
+
+			[cell]Lebensweise[/cell]
+			[cell]Leben in Schulen; je kleiner die Art, desto größer der Schwarm[/cell]
+
+			[cell]Fortpflanzung[/cell]
+			[cell]Weibchen legen Eier ins offene Meer; Männchen befruchten extern[/cell]
+
+			[cell]Ernährung[/cell]
+			[cell]Makrele, Heringe, Kalmare, Krebstiere[/cell]
+
+			[cell]Lebenserwartung[/cell]
+			[cell]10 bis 40 Jahre[/cell]
+			[/table]
+			",
+"tier2": "[b]Tier 2[/b]
+			Thunfische sind im Prinzip die Muskelprotze
+			mit Jetantrieb des Ozeans –
+			stromlinienförmig wie eine Luxusyacht,
+			aber mit deutlich weniger Rücksicht
+			auf den Spritverbrauch.
+
+			Während andere Fische gemächlich
+			durchs Wasser schaukeln,
+			prescht der Thunfisch
+			mit bis zu 70 Stundenkilometern durchs Meer.
+			Kein Wunder,
+			dass die meisten Beutefische
+			gar nicht wissen,
+			was sie getroffen hat –
+			wahrscheinlich hielten sie es
+			für einen besonders unfreundlichen Tornado.
+
+			Ihr Alltag?
+			Ein einziges Langstreckenrennen.
+			Thunfische legen jährlich
+			tausende Kilometer zurück,
+			als gäbe es Bonusmeilen
+			beim Meeres-Miles-&-More-Programm.
+
+			Nur für den Nachwuchs
+			gönnen sie sich eine kurze Pause:
+			Wenn Temperatur und Strömung stimmen,
+			werfen sie Millionen winziger Eier ins Meer.
+			Romantikfaktor?
+			Eher funktional
+			als gefühlvoll.
+
+			Dabei sind Thunfische
+			durchaus soziale Tiere.
+			Sie schwimmen in großen Schulen
+			(und nein,
+			sie lernen dort nichts
+			über Fangquoten)
+			und bewegen sich dabei
+			so perfekt synchron,
+			dass jeder Boyband-Choreograf
+			neidisch würde.
+
+			Es ist fast poetisch:
+			Eine glitzernde Formation
+			aus Kraft,
+			Präzision
+			und kollektivem Überlebenswillen,
+			die durch das Meer schießt –
+			bis ein Schleppnetz
+			mit All-you-can-catch-Angebot
+			vorbeikommt.
+
+			Kurzum:
+			Thunfische sind die Formel-1-Fahrer
+			des Ozeans
+			in einer Welt voller Fischstäbchen.
+			Schnell,
+			schön,
+			faszinierend –
+			und permanent in Lebensgefahr,
+			weil wir Menschen beschlossen haben,
+			dass sie besonders gut
+			zu Reis und Sojasoße passen.",
+		"tier3": ""
+	},
+	{
+		"ID":"6",
+		"name":"Mahi-Mahi",
+		"tier1": "[b]Tier 1[/b]
+			[table=2]
+			[cell][b]Eigenschaft[/b][/cell]
+			[cell][b]Mahi-Mahi[/b][/cell]
+
+			[cell]Artenanzahl[/cell]
+			[cell]2[/cell]
+
+			[cell]Größe[/cell]
+			[cell]Bis zu 2 m[/cell]
+
+			[cell]Gewicht[/cell]
+			[cell]Bis zu 30 kg[/cell]
+
+			[cell]Lebensraum[/cell]
+			[cell]Offenes Meer[/cell]
+
+			[cell]Lebensweise[/cell]
+			[cell]In kleinen Gruppen oder Paaren[/cell]
+
+			[cell]Fortpflanzung[/cell]
+			[cell]Laichen mehrmals im Jahr[/cell]
+
+			[cell]Ernährung[/cell]
+			[cell]Fische, Kalmare und Krustentiere[/cell]
+
+			[cell]Lebenserwartung[/cell]
+			[cell]Bis zu 5 Jahre[/cell]
+			[/table]
+			",
+"tier2": "[b]Tier 2[/b]
+			Der Mahi-Mahi ist so ziemlich das,
+			was passieren würde,
+			wenn Poseidon und ein Regenbogen
+			gemeinsam ein Haustier designen würden.
+
+			Golden,
+			türkis,
+			leuchtend wie ein tropischer Sonnenuntergang auf Speed –
+			dieser Fisch ist die schwimmende Definition von:
+			„Ich bin zu schön für dieses Meer.“
+
+			Schon der Name verrät es:
+			Mahi-Mahi bedeutet auf Hawaiisch
+			„stark, stark“ –
+			doppelt gemoppelt,
+			weil einfache Stärke
+			offenbar nicht reicht,
+			wenn man aussieht
+			wie ein lebendes Las-Vegas-Schild.
+
+			Dabei ist der Mahi-Mahi
+			nicht nur schön,
+			sondern auch ziemlich clever.
+			Er jagt in kleinen Gruppen,
+			organisiert sich taktisch
+			und schießt,
+			wenn er übermütig ist,
+			meterhoch aus dem Wasser –
+			einfach so,
+			weil er es kann.
+
+			In Hawaii sagt man,
+			dass diese Sprünge
+			die Götter erfreuen.
+			Und wer ihn so
+			durch die Luft wirbeln sieht,
+			könnte fast glauben,
+			er tanzt nur,
+			um Applaus
+			vom Ozean selbst zu bekommen.
+
+			Doch wie so oft:
+			Wo Schönheit ist,
+			ist auch ein Mensch mit einer Angel.
+			Der Mahi-Mahi
+			hat es auf die Speisekarten der Welt geschafft,
+			wo sein Name elegant-exotisch klingt:
+			„Mahi-Mahi,
+			serviert mit Mango-Salsa
+			und schlechtem Gewissen.“
+
+			Klingt deutlich edler
+			als „Goldmakrele“ –
+			und schon sitzt jemand
+			im Strandrestaurant in Flipflops
+			und lobt die Nachhaltigkeit,
+			während draußen
+			die nächsten Fischerboote auslaufen.
+
+			Trotzdem bleibt er
+			der Rockstar unter den Fischen:
+			auffällig,
+			freiheitsliebend
+			und irgendwie ständig auf Tour.
+			Ein Geschenk der Meeresgötter,
+			ein Symbol für Stärke,
+			Ausdauer
+			und das ewige Aufblitzen
+			der Sonne im Wasser.
+
+			Wenn man ihn sieht,
+			sollte man vielleicht
+			lieber staunen
+			als bestellen.",
+		"tier3": ""
+	},
+	{
+		"ID":"7",
+		"name":"Barracuda",
+		"tier1": "[b]Tier 1[/b]
+			[table=2]
+			[cell][b]Eigenschaft[/b][/cell]
+			[cell][b]Barrakuda[/b][/cell]
+
+			[cell]Artenanzahl[/cell]
+			[cell]ca. 20[/cell]
+
+			[cell]Größe[/cell]
+			[cell]Bis zu 2 m[/cell]
+
+			[cell]Gewicht[/cell]
+			[cell]Bis zu 50 kg[/cell]
+
+			[cell]Lebensraum[/cell]
+			[cell]Offenes Meer, aber auch küstennahe Gewässer[/cell]
+
+			[cell]Lebensweise[/cell]
+			[cell]Jungtiere: kleine Gruppen; adulte Tiere: Einzelgänger[/cell]
+
+			[cell]Fortpflanzung[/cell]
+			[cell]Eier ins offene Meer; externe Befruchtung[/cell]
+
+			[cell]Ernährung[/cell]
+			[cell]Kleinere Fische und Kopffüßer[/cell]
+
+			[cell]Lebenserwartung[/cell]
+			[cell]10 bis 15 Jahre[/cell]
+			[/table]
+			",
+"tier2": "[b]Tier 2[/b]
+			Der Barrakuda ist im Prinzip
+			das Messerblock-Set der Natur –
+			nur dass die Messer beschlossen haben,
+			eigenständig zu handeln.
+
+			Lang,
+			schlank,
+			silbern –
+			und mit einem Dauerblick,
+			der sagt:
+			„Beweg dich noch einmal,
+			und ich zerschneid dich in Pixel.“
+
+			Die Familie Sphyraenidae
+			hat offensichtlich
+			den Wut-Genpool geerbt.
+			Wo andere Fische
+			elegant durch Korallen gleiten,
+			schießen Barrakudas los
+			wie aufgescheuchte Küchenutensilien.
+
+			Ihr Motto scheint zu sein:
+			„Wenn es sich bewegt,
+			ist es Beute.
+			Wenn es sich nicht bewegt –
+			vielleicht trotzdem.“
+
+			Kleinere Arten jagen im Rudel –
+			ein Haufen hyperaktiver Zahnstocher
+			auf Koffein.
+			Die Großen hingegen patrouillieren allein,
+			majestätisch
+			wie ein Raser
+			auf leerer Autobahn
+			um drei Uhr morgens.
+
+			Manchmal folgen sie Tauchern einfach so –
+			nicht aus Neugier,
+			sondern weil sie hoffen,
+			dass du irgendwann glitzerst.
+
+			Und das Beste:
+			Einige Arten betreiben Kannibalismus.
+			Sie sind also nicht nur
+			gefährlich für andere,
+			sondern auch für sich selbst.
+			Familientreffen müssen…
+			interessant sein.",
+		"tier3": ""
+	},
+	{
+		"ID":"8",
+		"name":"Schwertfisch",
+		"tier1": "[b]Tier 1[/b]
+			[table=2]
+			[cell][b]Eigenschaft[/b][/cell]
+			[cell][b]Schwertfisch[/b][/cell]
+
+			[cell]Artenanzahl[/cell]
+			[cell]1[/cell]
+
+			[cell]Größe[/cell]
+			[cell]Bis zu 4,5 m[/cell]
+
+			[cell]Gewicht[/cell]
+			[cell]Bis zu 650 kg[/cell]
+
+			[cell]Lebensraum[/cell]
+			[cell]Offenes Meer[/cell]
+
+			[cell]Lebensweise[/cell]
+			[cell]Einzelgänger[/cell]
+
+			[cell]Fortpflanzung[/cell]
+			[cell]Legt Eier ins offene Meer; kein Kümmern um den Nachwuchs[/cell]
+
+			[cell]Ernährung[/cell]
+			[cell]Fische, Kalmare und andere Kopffüßer[/cell]
+
+			[cell]Lebenserwartung[/cell]
+			[cell]9 bis 15 Jahre[/cell]
+			[/table]
+			",
+"tier2": "[b]Tier 2[/b]
+			Der Schwertfisch ist im Grunde das,
+			was passiert,
+			wenn ein Fisch beim Evolutionstreffen zu spät kommt
+			und ruft:
+			„Sorry, bin spät –
+			kann ich wenigstens ein Schwert haben?“
+
+			Und die Evolution so:
+			„Na gut,
+			aber trag es mit Stil.“
+
+			Seitdem gleitet dieser aristokratische Meeres-Schurke
+			mit einer meterlangen Waffe im Gesicht
+			durchs Wasser,
+			als wäre er auf dem Weg
+			zu einem Duell
+			mit dem Atlantik persönlich.
+
+			Mit bis zu 90 km/h
+			ist der Schwertfisch
+			das Speedboat unter den Fischen:
+			elegant,
+			tödlich
+			und definitiv zu cool,
+			um in einem Schwarm zu schwimmen.
+
+			Er ist der Typ,
+			der lieber allein an der Bar sitzt,
+			Martini aus Salzwasser trinkt
+			und denkt:
+			„Ich bin das Problem.
+			Aber wenigstens bin ich hübsch.“
+
+			Natürlich hat der Mensch
+			auch hier zugeschlagen –
+			buchstäblich mit der Pfanne.
+			Der Schwertfisch gilt als Delikatesse,
+			vor allem für Leute,
+			die gern sagen:
+			„Ich esse nur nachhaltigen Fisch“,
+			während sie exakt das Gegenteil tun.
+
+			Ironie in Reinform:
+			Der schnellste,
+			schärfste Fisch des Meeres –
+			besiegt
+			vom langsamsten,
+			gierigsten Säugetier an Land.
+
+			Aber man muss ihm eins lassen:
+			Er hat Stil.
+			Wenn er durchs Wasser schießt,
+			glitzernd wie ein silberner Blitz,
+			könnte man fast meinen,
+			er posiert absichtlich
+			für ein unsichtbares Kamerateam,
+			das ihn nie vergessen wird.",
+		"tier3": ""
+	},
+	{
+		"ID":"9",
+		"name":"Lederschildkröte",
+		"tier1": "[b]Tier 1[/b]
+			[table=2]
+			[cell][b]Eigenschaft[/b][/cell]
+			[cell][b]Lederschildkröte[/b][/cell]
+
+			[cell]Artenanzahl[/cell]
+			[cell]1[/cell]
+
+			[cell]Größe[/cell]
+			[cell]Bis zu 2,5 m[/cell]
+
+			[cell]Gewicht[/cell]
+			[cell]Bis zu 700 kg[/cell]
+
+			[cell]Lebensraum[/cell]
+			[cell]Offenes Meer, weit entfernt von Küsten[/cell]
+
+			[cell]Lebensweise[/cell]
+			[cell]Einzelgängerisch; legt große Wanderstrecken zurück – von tropischen Brutgebieten bis in polare Regionen[/cell]
+
+			[cell]Fortpflanzung[/cell]
+			[cell]Weibchen kehren alle 2–3 Jahre zu denselben Stränden zurück, um Eier abzulegen; bis zu 100 Eier pro Gelege im Sand[/cell]
+
+			[cell]Ernährung[/cell]
+			[cell]Hauptsächlich Quallen, Salpen und andere weiche, gallertartige Organismen[/cell]
+
+			[cell]Lebenserwartung[/cell]
+			[cell]Geschätzt 50–100 Jahre[/cell]
+			[/table]
+			",
+"tier2": "[b]Tier 2[/b]
+			Wenn es im Meer einen Zen-Meister gibt,
+			dann ist es diese alte Dame.
+
+			Sie schwimmt gemächlich,
+			isst Quallen –
+			die Wasser-Version von Luft
+			mit Schmerzfunktion –
+			und lässt sich dabei
+			von absolut nichts stressen.
+			Nicht einmal
+			von der Menschheit.
+
+			Mit einer Gelassenheit,
+			die jeden Therapeuten
+			neidisch machen würde,
+			zieht sie von den Tropen
+			bis in die Polarmeere.
+			Niemand weiß genau,
+			wie sie das macht –
+			vermutlich durch reinen Willen,
+			oder weil sie schlicht
+			zu alt ist,
+			um sich noch
+			um Physik zu kümmern.
+
+			Ihr Panzer ist weich,
+			ihre Seele hart.
+			Und wenn man bedenkt,
+			dass sie schon vor
+			rund 100 Millionen Jahren
+			durch dieselben Meere glitt,
+			wirkt es fast so,
+			als würde sie sich heute
+			einfach nur wundern,
+			was wir hier unten
+			eigentlich wollen.
+
+			„Langsam?“
+			Ja.
+			„Aber komm du erstmal
+			700 Kilo weit.“",
+		"tier3": ""
+	},
 ]

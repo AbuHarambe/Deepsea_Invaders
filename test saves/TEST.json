@@ -4,23 +4,23 @@
   },
   "enemyCaptureData": [
     {
-      "captureCount": 3,
+      "captureCount": 8,
       "enemyTypeID": "0"
     },
     {
-      "captureCount": 3,
+      "captureCount": 7,
       "enemyTypeID": "1"
     },
     {
-      "captureCount": 1,
+      "captureCount": 2,
       "enemyTypeID": "2"
     },
     {
-      "captureCount": 1,
+      "captureCount": 3,
       "enemyTypeID": "3"
     },
     {
-      "captureCount": 5,
+      "captureCount": 8,
       "enemyTypeID": "4"
     },
     {
@@ -28,19 +28,19 @@
       "enemyTypeID": "5"
     },
     {
-      "captureCount": 2,
+      "captureCount": 3,
       "enemyTypeID": "6"
     },
     {
-      "captureCount": 4,
+      "captureCount": 4.0,
       "enemyTypeID": "7"
     },
     {
-      "captureCount": 4,
+      "captureCount": 4.0,
       "enemyTypeID": "8"
     },
     {
-      "captureCount": 3,
+      "captureCount": 3.0,
       "enemyTypeID": "9"
     }
   ],

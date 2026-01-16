@@ -11,10 +11,6 @@ func _ready() -> void:
 	#SceneTransition.animation_player.play("fade_in")  # Startet den Fade-In
 	pass
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
-
 func _on_optionen_pressed() -> void:
 	print("Öffne Optionen!")
 	get_tree().change_scene_to_file("res://Menus/Scenes/options_menu.tscn")

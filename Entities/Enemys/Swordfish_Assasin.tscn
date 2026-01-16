@@ -10,8 +10,9 @@ height = 148.0
 
 [node name="SwordfishAssasin" type="CharacterBody2D" groups=["enemies"]]
 collision_layer = 4
-collision_mask = 17
+collision_mask = 29
 script = ExtResource("1_u5a76")
+ID = "8"
 
 [node name="ScanProgressBar" parent="." instance=ExtResource("1_5b88g")]
 offset_left = -80.0

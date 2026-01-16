@@ -6,14 +6,15 @@
 [ext_resource type="PackedScene" uid="uid://d0j3sku8bfo52" path="res://Entities/Templates/AirRing.tscn" id="2_n487f"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_o1qon"]
-radius = 30.0
-height = 114.0
+radius = 19.0
+height = 136.0
 
 [node name="DelpinAoe" type="CharacterBody2D" groups=["enemies"]]
 collision_layer = 4
-collision_mask = 9
+collision_mask = 29
 script = ExtResource("1_o1qon")
 projectile_scene = ExtResource("2_n487f")
+ID = "4"
 
 [node name="ScanProgressBar" parent="." instance=ExtResource("1_teeny")]
 offset_left = -80.0
@@ -28,4 +29,5 @@ scale = Vector2(2, 2)
 texture = ExtResource("2_4e8fs")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -7)
 shape = SubResource("CapsuleShape2D_o1qon")

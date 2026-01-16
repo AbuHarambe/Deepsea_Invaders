@@ -17,6 +17,7 @@ offset_bottom = -635.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_t2r7q")
+ID = null
 image = ExtResource("1_33mv2")
 title = "FishName"
 tier1info = "- Catch X more for Tier 1"

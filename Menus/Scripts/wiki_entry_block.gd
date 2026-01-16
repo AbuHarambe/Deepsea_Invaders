@@ -1,6 +1,8 @@
 @tool
 extends Control  # or whatever your root node is
 
+
+@export var ID:String = "0"
 # --- Image ---
 var _image: Texture2D
 @export var image: Texture2D:
@@ -84,24 +86,45 @@ func _on_button_pressed() -> void:
 	var popup_scene: PackedScene = load("res://Menus/Scenes/wiki_entry_popup.tscn")
 	var popup: Control = popup_scene.instantiate()
 
-	# Find the wiki menu instance this block belongs to
-	var wiki_menu = get_tree().get_first_node_in_group("wiki_menu")
+	# Find wiki menu instance + overlay
+	var wiki_menu := get_tree().get_first_node_in_group("wiki_menu")
+	if wiki_menu == null:
+		push_error("WikiEntryBlock: wiki_menu group not found.")
+		return
 
-	# Or: var wiki_menu = get_parent().get_parent().get_parent() ... (but groups are cleaner)
-
-	var overlay = wiki_menu.get_overlay()
+	var overlay: Node = wiki_menu.get_overlay()
 	overlay.add_child(popup)
-	popup.set_data(_image, _title, _tier1info, _tier2info, _tier3info)
 
-	
-	# Feed Data
-	print("trying to feed")
-	var entry := WikiData.get_entry(_title)
-	popup.set_data(
-		_image,
-		_title,
-		entry.get("tier1", ""),
-		entry.get("tier2", ""),
-		entry.get("tier3", "")
-	)
-	print(entry)
+	# Fetch wiki entry text from WikiData JSON
+	var entry: Dictionary = WikiData.get_entry(ID)
+
+	# How many of this fish the player has scanned/caught
+	var count: int = _get_capture_count_for(ID)
+
+	# Apply thresholds
+	var tier1_text: String = _tier_text_or_locked(count, 1, String(entry.get("tier1", "")))
+	var tier2_text: String = _tier_text_or_locked(count, 5, String(entry.get("tier2", "")))
+	var tier3_text: String = _tier_text_or_locked(count, 10, String(entry.get("tier3", "")))
+
+	# Feed popup with: image + title from block, tier texts gated by progress
+	popup.set_data(_image, _title, tier1_text, tier2_text, tier3_text)
+
+const LOCKED_MSG := "Du musst diesen Fisch häufiger fangen, um mehr Infos zu erhalten."
+
+func _get_capture_count_for(enemy_type_id: String) -> int:
+	# Reads from SaveManager's current save data
+	var list_variant: Variant = SaveManager.data.get("enemyCaptureData", [])
+	if typeof(list_variant) != TYPE_ARRAY:
+		return 0
+
+	var list: Array = list_variant as Array
+	for entry in list:
+		if typeof(entry) == TYPE_DICTIONARY:
+			var d: Dictionary = entry as Dictionary
+			if String(d.get("enemyTypeID", "")) == enemy_type_id:
+				return int(d.get("captureCount", 0))
+	return 0
+
+
+func _tier_text_or_locked(capture_count: int, required: int, text: String) -> String:
+	return text if capture_count >= required and text != "" else LOCKED_MSG

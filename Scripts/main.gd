@@ -2,15 +2,23 @@ extends Node2D
 
 @onready var hud_layer = $HUD_Layer
 var pause_menu_scene = preload("res://Menus/Scenes/pause_menu.tscn")
+var gameover_scene = preload("res://Menus/Scenes/gameover.tscn")
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass # Replace with function body.
 
+func _enter_tree() -> void:
+	add_to_group("main_scene")
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
 # In main.gd
+func _game_over():
+	var gameover_instance = gameover_scene.instantiate()
+	hud_layer.add_child(gameover_instance)
+	pass
+
 func _unhandled_input(event):
 	# Prüfen, ob die "ui_cancel"-Aktion gedrückt wurde (das ist Standard für Esc)
 	if event.is_action_pressed("ui_cancel"):

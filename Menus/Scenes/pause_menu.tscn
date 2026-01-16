@@ -49,7 +49,7 @@ text = "Neustart"
 
 [node name="Wiki (Platzhalter" type="Button" parent="CenterContainer/VBoxContainer"]
 layout_mode = 2
-text = "WIKI(Platzhalter)"
+text = "WIKI"
 
 [node name="Zum Hauptmenü" type="Button" parent="CenterContainer/VBoxContainer"]
 layout_mode = 2

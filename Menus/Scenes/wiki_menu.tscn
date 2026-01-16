@@ -1,12 +1,17 @@
-[gd_scene load_steps=8 format=3 uid="uid://cur07dwbcp8u1"]
+[gd_scene load_steps=13 format=3 uid="uid://cur07dwbcp8u1"]
 
 [ext_resource type="PackedScene" uid="uid://c0s211xegts51" path="res://Menus/Scenes/wiki_entry_block.tscn" id="1_6mjcd"]
 [ext_resource type="Script" uid="uid://byt62vijifo53" path="res://Menus/Scripts/wiki_menu.gd" id="1_qgyqu"]
-[ext_resource type="Texture2D" uid="uid://v18wu4gokvrk" path="res://Assets/Visual/Blubblubs/Clownfisch.png" id="2_vq7jy"]
-[ext_resource type="Texture2D" uid="uid://d2r5a40qtqj4p" path="res://Assets/Visual/Blubblubs/Kugelfisch.png" id="3_y6von"]
-[ext_resource type="Texture2D" uid="uid://dbbbfafiriym6" path="res://Assets/Visual/Blubblubs/Papgeifisch.png" id="4_qgyqu"]
-[ext_resource type="Texture2D" uid="uid://dx2j4grwyrdt5" path="res://Assets/Visual/Blubblubs/Seepferdchen.png" id="5_sjntr"]
-[ext_resource type="Texture2D" uid="uid://nq0shklekhdr" path="res://Assets/Visual/Blubblubs/Delfin.png" id="6_dvd0l"]
+[ext_resource type="Texture2D" uid="uid://dwo4sgpumwatr" path="res://Assets/Visual/Blubblubs/Wiki/Clownfisch.png" id="3_s80lg"]
+[ext_resource type="Texture2D" uid="uid://btmhur1vrhy5w" path="res://Assets/Visual/Blubblubs/Wiki/Kugelfisch.png" id="4_3g3dn"]
+[ext_resource type="Texture2D" uid="uid://dqpn5oulm470h" path="res://Assets/Visual/Blubblubs/Wiki/Papgeifisch.png" id="5_xti4e"]
+[ext_resource type="Texture2D" uid="uid://ntm27xv3tnh" path="res://Assets/Visual/Blubblubs/Wiki/Seepferdchen.png" id="6_c578q"]
+[ext_resource type="Texture2D" uid="uid://ba57faux08p5c" path="res://Assets/Visual/Blubblubs/Wiki/Delfin.png" id="7_km6if"]
+[ext_resource type="Texture2D" uid="uid://dg6aw677icof6" path="res://Assets/Visual/Blubblubs/Wiki/tuna.png" id="8_0yefg"]
+[ext_resource type="Texture2D" uid="uid://bmvpxqjdjdoku" path="res://Assets/Visual/Blubblubs/Wiki/MahiMahi_Rapidfire.png" id="9_hetk0"]
+[ext_resource type="Texture2D" uid="uid://c23nu1isfqvhw" path="res://Assets/Visual/Blubblubs/Wiki/Barracuda_Sniper.png" id="10_xsp87"]
+[ext_resource type="Texture2D" uid="uid://bacat6dmjmqxy" path="res://Assets/Visual/Blubblubs/Wiki/Swordfish_assain.png" id="11_iic10"]
+[ext_resource type="Texture2D" uid="uid://xtnrnvaiqq0q" path="res://Assets/Visual/Blubblubs/Wiki/Trutle_Tank.png" id="12_0x65v"]
 
 [node name="WikiPage" type="Control"]
 layout_mode = 3
@@ -66,103 +71,63 @@ columns = 5
 
 [node name="WikiEntrySmoll" parent="MarginContainer/VBoxContainer/ScrollContainer/GridContainer" instance=ExtResource("1_6mjcd")]
 layout_mode = 2
-image = ExtResource("2_vq7jy")
+ID = "0"
+image = ExtResource("3_s80lg")
 title = "Clownfisch"
 
 [node name="WikiEntrySmoll2" parent="MarginContainer/VBoxContainer/ScrollContainer/GridContainer" instance=ExtResource("1_6mjcd")]
 layout_mode = 2
-image = ExtResource("3_y6von")
+ID = "1"
+image = ExtResource("4_3g3dn")
 title = "Kugelfisch"
 
 [node name="WikiEntrySmoll3" parent="MarginContainer/VBoxContainer/ScrollContainer/GridContainer" instance=ExtResource("1_6mjcd")]
 layout_mode = 2
-image = ExtResource("4_qgyqu")
+ID = "2"
+image = ExtResource("5_xti4e")
 title = "Papageifisch"
 
 [node name="WikiEntrySmoll4" parent="MarginContainer/VBoxContainer/ScrollContainer/GridContainer" instance=ExtResource("1_6mjcd")]
 layout_mode = 2
-image = ExtResource("5_sjntr")
+ID = "3"
+image = ExtResource("6_c578q")
 title = "Seepferdchen"
 
 [node name="WikiEntrySmoll5" parent="MarginContainer/VBoxContainer/ScrollContainer/GridContainer" instance=ExtResource("1_6mjcd")]
 layout_mode = 2
-image = ExtResource("6_dvd0l")
+ID = "4"
+image = ExtResource("7_km6if")
 title = "Delfin"
 
 [node name="WikiEntrySmoll6" parent="MarginContainer/VBoxContainer/ScrollContainer/GridContainer" instance=ExtResource("1_6mjcd")]
 layout_mode = 2
-image = ExtResource("2_vq7jy")
-title = "Clownfish"
+ID = "5"
+image = ExtResource("8_0yefg")
+title = "Thunfisch"
 
 [node name="WikiEntrySmoll7" parent="MarginContainer/VBoxContainer/ScrollContainer/GridContainer" instance=ExtResource("1_6mjcd")]
 layout_mode = 2
-image = ExtResource("2_vq7jy")
-title = "Clownfish"
+ID = "6"
+image = ExtResource("9_hetk0")
+title = "Mahi-Mahi"
 
 [node name="WikiEntrySmoll8" parent="MarginContainer/VBoxContainer/ScrollContainer/GridContainer" instance=ExtResource("1_6mjcd")]
 layout_mode = 2
-image = ExtResource("2_vq7jy")
-title = "Clownfish"
+ID = "7"
+image = ExtResource("10_xsp87")
+title = "Barracuda"
 
 [node name="WikiEntrySmoll9" parent="MarginContainer/VBoxContainer/ScrollContainer/GridContainer" instance=ExtResource("1_6mjcd")]
 layout_mode = 2
-image = ExtResource("2_vq7jy")
-title = "Clownfish"
+ID = "8"
+image = ExtResource("11_iic10")
+title = "Schwertfisch"
 
 [node name="WikiEntrySmoll10" parent="MarginContainer/VBoxContainer/ScrollContainer/GridContainer" instance=ExtResource("1_6mjcd")]
 layout_mode = 2
-image = ExtResource("2_vq7jy")
-title = "Clownfish"
-
-[node name="WikiEntrySmoll11" parent="MarginContainer/VBoxContainer/ScrollContainer/GridContainer" instance=ExtResource("1_6mjcd")]
-layout_mode = 2
-image = ExtResource("2_vq7jy")
-title = "Clownfish"
-
-[node name="WikiEntrySmoll12" parent="MarginContainer/VBoxContainer/ScrollContainer/GridContainer" instance=ExtResource("1_6mjcd")]
-layout_mode = 2
-image = ExtResource("2_vq7jy")
-title = "Clownfish"
-
-[node name="WikiEntrySmoll13" parent="MarginContainer/VBoxContainer/ScrollContainer/GridContainer" instance=ExtResource("1_6mjcd")]
-layout_mode = 2
-image = ExtResource("2_vq7jy")
-title = "Clownfish"
-
-[node name="WikiEntrySmoll14" parent="MarginContainer/VBoxContainer/ScrollContainer/GridContainer" instance=ExtResource("1_6mjcd")]
-layout_mode = 2
-image = ExtResource("2_vq7jy")
-title = "Clownfish"
-
-[node name="WikiEntrySmoll15" parent="MarginContainer/VBoxContainer/ScrollContainer/GridContainer" instance=ExtResource("1_6mjcd")]
-layout_mode = 2
-image = ExtResource("2_vq7jy")
-title = "Clownfish"
-
-[node name="WikiEntrySmoll16" parent="MarginContainer/VBoxContainer/ScrollContainer/GridContainer" instance=ExtResource("1_6mjcd")]
-layout_mode = 2
-image = ExtResource("2_vq7jy")
-title = "Clownfish"
-
-[node name="WikiEntrySmoll17" parent="MarginContainer/VBoxContainer/ScrollContainer/GridContainer" instance=ExtResource("1_6mjcd")]
-layout_mode = 2
-image = ExtResource("2_vq7jy")
-title = "Clownfish"
-
-[node name="WikiEntrySmoll18" parent="MarginContainer/VBoxContainer/ScrollContainer/GridContainer" instance=ExtResource("1_6mjcd")]
-layout_mode = 2
-image = ExtResource("2_vq7jy")
-title = "Clownfish"
-
-[node name="WikiEntrySmoll19" parent="MarginContainer/VBoxContainer/ScrollContainer/GridContainer" instance=ExtResource("1_6mjcd")]
-layout_mode = 2
-image = ExtResource("2_vq7jy")
-title = "Clownfish"
-
-[node name="WikiEntrySmoll20" parent="MarginContainer/VBoxContainer/ScrollContainer/GridContainer" instance=ExtResource("1_6mjcd")]
-layout_mode = 2
-image = ExtResource("2_vq7jy")
-title = "Clownfish"
+ID = "9"
+image = ExtResource("12_0x65v")
+title = "Lederschildkröte"
 
 [node name="Overlay" type="CanvasLayer" parent="."]
 layer = 10

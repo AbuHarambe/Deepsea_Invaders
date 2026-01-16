@@ -1,6 +1,18 @@
-[gd_scene load_steps=2 format=3 uid="uid://b27c1emc1wd2s"]
+[gd_scene load_steps=12 format=3 uid="uid://b27c1emc1wd2s"]
 
 [ext_resource type="Script" uid="uid://cv3n6ixbfq5cl" path="res://Scripts/enemy_spawner.gd" id="1_4l55s"]
+[ext_resource type="PackedScene" uid="uid://dt1xkib48mtxs" path="res://Entities/Enemys/Clownfish_Rapidfire.tscn" id="2_6odvj"]
+[ext_resource type="PackedScene" uid="uid://dsyn54yxcb8n1" path="res://Entities/Enemys/Pufferfish_Tank.tscn" id="3_le2do"]
+[ext_resource type="PackedScene" uid="uid://cl4pgawjyxh5q" path="res://Entities/Enemys/Parrot_Assasin.tscn" id="4_6mool"]
+[ext_resource type="PackedScene" uid="uid://boh088qdnu8et" path="res://Entities/Enemys/Seahorse_Sniper.tscn" id="5_ti0ik"]
+[ext_resource type="PackedScene" uid="uid://ct0qawatvsold" path="res://Entities/Enemys/Delpin_AOE.tscn" id="6_bmo14"]
+[ext_resource type="PackedScene" uid="uid://b4e4md161bteq" path="res://Entities/Enemys/Tuna_AOE.tscn" id="7_r6gie"]
+[ext_resource type="PackedScene" uid="uid://ut7xsb51d7is" path="res://Entities/Enemys/MahiMahi_Rapidfire.tscn" id="8_k5e7l"]
+[ext_resource type="PackedScene" uid="uid://r36rk7hmid4c" path="res://Entities/Enemys/Barracuda_Sniper.tscn" id="9_1ey7t"]
+[ext_resource type="PackedScene" uid="uid://dss4eu78weyxf" path="res://Entities/Enemys/Swordfish_Assasin.tscn" id="10_5be8n"]
+[ext_resource type="PackedScene" uid="uid://bqfom4p3l35hu" path="res://Entities/Enemys/Turtle_Tank.tscn" id="11_xgnk8"]
 
 [node name="EnemySpawner" type="Node2D"]
 script = ExtResource("1_4l55s")
+ENEMY_POOL_A = Array[PackedScene]([ExtResource("2_6odvj"), ExtResource("3_le2do"), ExtResource("4_6mool"), ExtResource("5_ti0ik"), ExtResource("6_bmo14")])
+ENEMY_POOL_B = Array[PackedScene]([ExtResource("7_r6gie"), ExtResource("8_k5e7l"), ExtResource("9_1ey7t"), ExtResource("10_5be8n"), ExtResource("11_xgnk8")])

@@ -6,8 +6,8 @@ func _ready() -> void:
 	if file:
 		data = JSON.parse_string(file.get_as_text())
 
-func get_entry(name: String) -> Dictionary:
+func get_entry(ID: String) -> Dictionary:
 	for entry in data:
-		if entry.get("name") == name:
+		if entry.get("ID") == ID:
 			return entry
 	return {}

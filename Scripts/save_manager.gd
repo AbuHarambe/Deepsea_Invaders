@@ -165,3 +165,18 @@ func add_skill_level(skill_id: String, delta: int = 1) -> void:
 	var current_level: int = int(skill_entry.get("skillLevel", 1))
 	skill_entry["skillLevel"] = current_level + delta
 	save()
+	
+func reset_all_fish_progress() -> void:
+	# Pull the default capture list from the template (so you keep the same set of fish IDs)
+	var template: Dictionary = load_template()
+	var template_list_variant: Variant = template.get("enemyCaptureData", [])
+	var template_list: Array
+
+	if typeof(template_list_variant) == TYPE_ARRAY:
+		# Duplicate so we don't accidentally share references
+		template_list = (template_list_variant as Array).duplicate(true)
+	else:
+		template_list = []
+
+	data["enemyCaptureData"] = template_list
+	save()

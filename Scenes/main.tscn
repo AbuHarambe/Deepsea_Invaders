@@ -1,22 +1,16 @@
-[gd_scene load_steps=18 format=3 uid="uid://dktdyic4puxgw"]
+[gd_scene load_steps=12 format=3 uid="uid://dktdyic4puxgw"]
 
 [ext_resource type="PackedScene" uid="uid://bg4a3kqnpolqt" path="res://Entities/Player/player.tscn" id="1_jjgbg"]
 [ext_resource type="Script" uid="uid://dc4utg2h24prv" path="res://Scripts/main.gd" id="1_jjvhh"]
 [ext_resource type="PackedScene" uid="uid://c38uipep74dgj" path="res://Scenes/background.tscn" id="2_ynf5e"]
 [ext_resource type="PackedScene" uid="uid://dj1shnag1egsc" path="res://Entities/Bars/health_bar.tscn" id="3_8gbba"]
-[ext_resource type="PackedScene" uid="uid://dt1xkib48mtxs" path="res://Entities/Enemys/Clownfish_Rapidfire.tscn" id="3_344ge"]
+[ext_resource type="PackedScene" uid="uid://ut7xsb51d7is" path="res://Entities/Enemys/MahiMahi_Rapidfire.tscn" id="3_d1ilt"]
 [ext_resource type="PackedScene" uid="uid://b27c1emc1wd2s" path="res://Scenes/enemy_spawner.tscn" id="4_6bp64"]
+[ext_resource type="PackedScene" uid="uid://r36rk7hmid4c" path="res://Entities/Enemys/Barracuda_Sniper.tscn" id="4_6iyac"]
 [ext_resource type="PackedScene" uid="uid://t0cyx3fnd5y3" path="res://Scenes/wall.tscn" id="4_21xkr"]
-[ext_resource type="PackedScene" uid="uid://r36rk7hmid4c" path="res://Entities/Enemys/Barracuda_Sniper.tscn" id="5_6bp64"]
-[ext_resource type="PackedScene" uid="uid://dsyn54yxcb8n1" path="res://Entities/Enemys/Pufferfish_Tank.tscn" id="6_6iyac"]
+[ext_resource type="PackedScene" uid="uid://dss4eu78weyxf" path="res://Entities/Enemys/Swordfish_Assasin.tscn" id="5_fdnlq"]
 [ext_resource type="PackedScene" uid="uid://bcato4c1m12r2" path="res://Entities/Bars/generic_progress_bar.tscn" id="6_21xkr"]
-[ext_resource type="PackedScene" uid="uid://cl4pgawjyxh5q" path="res://Entities/Enemys/Parrot_Assasin.tscn" id="7_fdnlq"]
-[ext_resource type="PackedScene" uid="uid://boh088qdnu8et" path="res://Entities/Enemys/Seahorse_Sniper.tscn" id="8_jkdf5"]
-[ext_resource type="PackedScene" uid="uid://ct0qawatvsold" path="res://Entities/Enemys/Delpin_AOE.tscn" id="9_wsu2k"]
-[ext_resource type="PackedScene" uid="uid://b4e4md161bteq" path="res://Entities/Enemys/Tuna_AOE.tscn" id="10_h1bgf"]
-[ext_resource type="PackedScene" uid="uid://ut7xsb51d7is" path="res://Entities/Enemys/MahiMahi_Rapidfire.tscn" id="11_b3802"]
-[ext_resource type="PackedScene" uid="uid://dss4eu78weyxf" path="res://Entities/Enemys/Swordfish_Assasin.tscn" id="13_fevyy"]
-[ext_resource type="PackedScene" uid="uid://bqfom4p3l35hu" path="res://Entities/Enemys/Turtle_Tank.tscn" id="14_hibaj"]
+[ext_resource type="PackedScene" uid="uid://bqfom4p3l35hu" path="res://Entities/Enemys/Turtle_Tank.tscn" id="6_jkdf5"]
 
 [node name="Main" type="Node2D"]
 position = Vector2(264, 792)
@@ -25,8 +19,7 @@ script = ExtResource("1_jjvhh")
 [node name="EnemySpawner" parent="." node_paths=PackedStringArray("player_node") instance=ExtResource("4_6bp64")]
 position = Vector2(-1736, -1384)
 player_node = NodePath("../Player")
-ENEMY_POOL_A = Array[PackedScene]([ExtResource("3_344ge"), ExtResource("6_6iyac"), ExtResource("7_fdnlq"), ExtResource("8_jkdf5"), ExtResource("9_wsu2k")])
-ENEMY_POOL_B = Array[PackedScene]([ExtResource("10_h1bgf"), ExtResource("11_b3802"), ExtResource("5_6bp64"), ExtResource("13_fevyy"), ExtResource("14_hibaj")])
+ENEMY_POOL_B = Array[PackedScene]([ExtResource("3_d1ilt"), ExtResource("4_6iyac"), ExtResource("5_fdnlq"), ExtResource("6_jkdf5")])
 
 [node name="Background" parent="." instance=ExtResource("2_ynf5e")]
 position = Vector2(504, 360)

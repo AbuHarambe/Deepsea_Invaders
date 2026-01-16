@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://r36rk7hmid4c"]
+[gd_scene load_steps=6 format=3 uid="uid://r36rk7hmid4c"]
 
 [ext_resource type="PackedScene" uid="uid://bql5gie2os6e0" path="res://Entities/Bars/scan_progress_bar.tscn" id="1_0wgdi"]
 [ext_resource type="Script" uid="uid://iq1hfkjvaawf" path="res://Entities/Templates/EnemySniper.gd" id="1_ah7v0"]
+[ext_resource type="PackedScene" uid="uid://bflshfviyycqv" path="res://Entities/Templates/Projectile.tscn" id="2_n2xtj"]
 [ext_resource type="Texture2D" uid="uid://0ha2wj16x5vf" path="res://Assets/Visual/Blubblubs/Barracuda_Sniper.png" id="2_x7f8r"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_x7f8r"]
@@ -10,8 +11,10 @@ height = 144.0
 
 [node name="BarracudaSniper" type="CharacterBody2D" groups=["enemies"]]
 collision_layer = 4
-collision_mask = 17
+collision_mask = 29
 script = ExtResource("1_ah7v0")
+ammo_scene = ExtResource("2_n2xtj")
+ID = "7"
 
 [node name="ScanProgressBar" parent="." instance=ExtResource("1_0wgdi")]
 offset_left = -80.0

@@ -5,6 +5,7 @@ class_name BaseMeleeBlubblub # Gives the class a reusable name for type checking
 # ==============================================================================
 # 1. ENEMY STATS & EXPORTS (REUSABLE)
 # ==============================================================================
+@export var ID:String = "0"
 @export var image: Texture2D:
 	set(value):
 		image = value
@@ -22,7 +23,7 @@ class_name BaseMeleeBlubblub # Gives the class a reusable name for type checking
 @export_group("Scan Decay Settings")
 @export var scan_decay_rate: float = 0.5 
 @export var scan_decay_delay: float = 1.0
-@export var scanner_slow_factor: float = 2.0
+@export var scanner_slow_factor: float = 1.0
 
 
 
@@ -57,8 +58,6 @@ func _physics_process(delta: float) -> void:
 	# 3c. MOVEMENT EXECUTION & ROTATION
 	_apply_rotation(delta)
 	move_and_slide()
-	
-	global_position.y = max(global_position.y, WorldData.MAX_DEPTH_Y)
 	
 	# 3d. COLLISION CHECK
 	if get_slide_collision_count() > 0:
@@ -150,6 +149,7 @@ func _bubble_away():
 	# Placeholder for the "bubble away" animation/sound
 	print(name, " has been bubbled away!")
 	# Notify manager to update enemy count
+	SaveManager.increment_capture(ID)
 	get_tree().call_group("game_manager_group", "on_enemy_bubbled") 
 	queue_free()
 

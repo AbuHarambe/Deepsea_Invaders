@@ -1,13 +1,13 @@
 [gd_scene load_steps=9 format=3 uid="uid://bg4a3kqnpolqt"]
 
 [ext_resource type="Script" uid="uid://xl0q22g8gn0a" path="res://Entities/Player/player.gd" id="1_taegk"]
-[ext_resource type="Texture2D" uid="uid://djr7ds5nug411" path="res://Assets/Visual/Sub.png" id="2_kee72"]
+[ext_resource type="Texture2D" uid="uid://d3r3yey0twg6q" path="res://Assets/Visual/Uboot_grey.png" id="2_tekja"]
 [ext_resource type="Script" uid="uid://ugn2nbaonkcg" path="res://Entities/Player/scanner.gd" id="3_prmdv"]
 [ext_resource type="Texture2D" uid="uid://cvllnk5mkxeb3" path="res://Assets/Visual/Scanner_animated_3t.png" id="4_s1j76"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_v0iea"]
 radius = 19.0
-height = 140.0
+height = 102.0
 
 [sub_resource type="Animation" id="Animation_6t5aa"]
 resource_name = "Idle"
@@ -54,8 +54,8 @@ speed = 500
 [node name="Sprite" type="Sprite2D" parent="."]
 position = Vector2(-1, 0)
 rotation = -3.1415925
-scale = Vector2(0.2, 0.2)
-texture = ExtResource("2_kee72")
+scale = Vector2(3, 3)
+texture = ExtResource("2_tekja")
 
 [node name="Hurtbox" type="CollisionShape2D" parent="."]
 position = Vector2(-5.9604645e-08, -7.1054274e-15)

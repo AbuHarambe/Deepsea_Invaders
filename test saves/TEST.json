@@ -1,0 +1,61 @@
+{
+  "cosmetics": {
+    "hat": "none"
+  },
+  "enemyCaptureData": [
+    {
+      "captureCount": 3,
+      "enemyTypeID": "0"
+    },
+    {
+      "captureCount": 3,
+      "enemyTypeID": "1"
+    },
+    {
+      "captureCount": 1,
+      "enemyTypeID": "2"
+    },
+    {
+      "captureCount": 1,
+      "enemyTypeID": "3"
+    },
+    {
+      "captureCount": 5,
+      "enemyTypeID": "4"
+    },
+    {
+      "captureCount": 0.0,
+      "enemyTypeID": "5"
+    },
+    {
+      "captureCount": 2,
+      "enemyTypeID": "6"
+    },
+    {
+      "captureCount": 4,
+      "enemyTypeID": "7"
+    },
+    {
+      "captureCount": 4,
+      "enemyTypeID": "8"
+    },
+    {
+      "captureCount": 3,
+      "enemyTypeID": "9"
+    }
+  ],
+  "playerHP": 0.0,
+  "playerName": "",
+  "playerXP": 0.0,
+  "upgradeSkillData": {
+    "movementSpeed": {
+      "skillLevel": 1.0
+    },
+    "scanRange": {
+      "skillLevel": 1.0
+    },
+    "scanSpeed": {
+      "skillLevel": 1.0
+    }
+  }
+}

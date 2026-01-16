@@ -8,16 +8,18 @@
 radius = 13.0
 height = 58.0
 
-[node name="MeleeEnemy" type="CharacterBody2D" groups=["enemies"]]
+[node name="ParrotAssassin" type="CharacterBody2D" groups=["enemies"]]
 collision_layer = 4
-collision_mask = 9
+collision_mask = 29
 script = ExtResource("1_nkwqm")
+ID = "2"
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(2, 2)
 texture = ExtResource("2_fjgcv")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-2, 0)
 shape = SubResource("CapsuleShape2D_nkwqm")
 
 [node name="ScanProgressBar" parent="." instance=ExtResource("3_anl6a")]

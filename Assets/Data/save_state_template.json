@@ -7,25 +7,45 @@
   },
   "enemyCaptureData": [
 	{
-	  "enemyTypeID": "Clownfisch",
+	  "enemyTypeID": "0",
 	  "captureCount": 0
 	},
 	{
-	  "enemyTypeID": "Kugelfisch",
+	  "enemyTypeID": "1",
 	  "captureCount": 0
 	},
 	{
-	  "enemyTypeID": "Papageifisch",
+	  "enemyTypeID": "2",
 	  "captureCount": 0
 	},
 	{
-	  "enemyTypeID": "Seepferdchen",
+	  "enemyTypeID": "3",
 	  "captureCount": 0
 	},
 	{
-	  "enemyTypeID": "Delfin",
+	  "enemyTypeID": "4",
 	  "captureCount": 0
-	}
+	},
+	{
+	  "enemyTypeID": "5",
+	  "captureCount": 0
+	},
+	{
+	  "enemyTypeID": "6",
+	  "captureCount": 0
+	},
+	{
+	  "enemyTypeID": "7",
+	  "captureCount": 0
+	},
+	{
+	  "enemyTypeID": "8",
+	  "captureCount": 0
+	},
+	{
+	  "enemyTypeID": "9",
+	  "captureCount": 0
+	},
   ],
   "upgradeSkillData": {
 	"scanSpeed": {

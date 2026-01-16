@@ -33,11 +33,11 @@ layout_mode = 2
 
 [node name="Start" type="Button" parent="CenterContainer/VBoxContainer"]
 layout_mode = 2
-text = "Starto!"
+text = "Start"
 
 [node name="Optionen" type="Button" parent="CenterContainer/VBoxContainer"]
 layout_mode = 2
-text = "Optiones"
+text = "Optionen"
 
 [node name="WIKI" type="Button" parent="CenterContainer/VBoxContainer"]
 layout_mode = 2
@@ -45,7 +45,7 @@ text = "WIKI"
 
 [node name="Quit" type="Button" parent="CenterContainer/VBoxContainer"]
 layout_mode = 2
-text = "Rage QUIT!"
+text = "Spiel verlassen"
 
 [node name="Overlay" type="CanvasLayer" parent="."]
 layer = 10

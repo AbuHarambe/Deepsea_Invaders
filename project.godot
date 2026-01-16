@@ -34,6 +34,7 @@ window/stretch/aspect="expand"
 player_group=""
 progress_bars=""
 enemies=""
+main_scene=""
 
 [gui]
 

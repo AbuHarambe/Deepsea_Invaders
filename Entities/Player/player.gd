@@ -13,6 +13,9 @@ extends CharacterBody2D
 @onready var sprite_node = $Sprite
 @onready var hurtbox_node = $Hurtbox
 @onready var health_bar = get_tree().get_first_node_in_group("progress_bars")
+@onready var main := get_tree().get_first_node_in_group("main_scene")
+
+
 
 var current_health: int = 0
 
@@ -35,7 +38,7 @@ func _ready() -> void:
 	animation_player.play("Idle")
 	
 	#load_save_state()
-
+	
 #_process is called every frame. Delta is the elapsed time since the last frame
 func _physics_process(delta: float) -> void:
 	# maps directional inputs into a vector called direction
@@ -111,6 +114,8 @@ func _rotate_scanner_to_mouse():
 
 func handle_death():
 	#for now just print the msg later on play sound and so on
+	if main:
+		main._game_over()
 	print("Player Defeated.")
 	#removes the player from the game
 	queue_free()
@@ -118,3 +123,6 @@ func handle_death():
 func take_damage (dmg):
 	current_health = current_health - dmg
 	health_bar.set_health(current_health)
+	if current_health <= 0:
+		handle_death()
+		pass

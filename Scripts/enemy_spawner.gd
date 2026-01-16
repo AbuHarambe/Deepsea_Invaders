@@ -3,6 +3,9 @@ extends Node2D
 # --- New Limit Property ---
 ## Maximum number of enemies allowed on screen at one time.
 @export var MAX_ENEMIES_ON_SCREEN: int = 8 
+@export var max_dist_2_player = 2000
+@export var min_dist_2_player = 1600
+
 
 # --- Editable Properties in the Inspector ---
 @export var DIVIDE_X_POS: float = 500.0
@@ -25,12 +28,12 @@ func _ready():
 
 	# 2. Set up the spawn timer
 	spawn_timer = Timer.new()
-	add_child(spawn_timer)
 	spawn_timer.wait_time = spawn_interval
 	spawn_timer.one_shot = false
-	spawn_timer.autostart = true
 	spawn_timer.timeout.connect(_on_spawn_timer_timeout)
-	print(spawn_timer.time_left)
+	add_child(spawn_timer)
+	spawn_timer.start()
+
 
 func _on_spawn_timer_timeout():
 	print("timer timeout")
@@ -90,7 +93,7 @@ func spawn_enemy():
 # --- Utility Function for Spawn Position (Remains the same) ---
 
 func determine_spawn_position(player_pos: Vector2) -> Vector2:
-	var distance = randf_range(800, 1000)
+	var distance = randf_range(min_dist_2_player, max_dist_2_player)
 	var angle = randf() * TAU
 	
 	var offset = Vector2(cos(angle), sin(angle)) * distance
